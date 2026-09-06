@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Destination Management - Saved destination packages and dream itineraries.">
+    <title>Saved Destinations | Aura Destination Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/candy.css">
+    <script src="assets/js/header.js"></script>
+
+    <style>
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .dest-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <stackly-header></stackly-header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px; background: #FAF8F5; min-height: 80vh;">
+        
+        <!-- Banner -->
+        <section style="background: linear-gradient(rgba(11,25,44,0.85), rgba(11,25,44,0.85)), url('images/dest_kyoto.webp') center/cover; padding: 70px 0; color: #fff; text-align: center;">
+            <div class="container">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;"><i class="fa-solid fa-heart"></i> Saved Collection</span>
+                <h1 style="font-size: 2.8rem; font-family: 'Playfair Display', serif; margin: 8px 0;">Saved Destinations & Packages</h1>
+                <p style="color: #CBD5E1;">Your saved dream itineraries for future corporate retreats and personal voyages</p>
+            </div>
+        </section>
+
+        <div class="container" style="padding: 40px 0 80px;">
+            <div class="wishlist-grid">
+                
+                <!-- Saved 1 -->
+                <div class="dest-card product-card" data-name="Kyoto Zen Cultural Retreat" data-price="$3,100.00" data-img="images/dest_kyoto.webp">
+                    <div style="height: 200px; overflow: hidden; position: relative;">
+                        <img src="images/dest_kyoto.webp" alt="Kyoto Zen" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span style="position: absolute; top: 12px; left: 12px; background: #00A896; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">CULTURAL SANCTUARY</span>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="font-size: 0.85rem; color: #64748B;"><i class="fa-solid fa-location-dot" style="color: #00A896;"></i> Japan &bull; 7 Days</div>
+                        <h3 style="font-size: 1.2rem; color: #0B192C; margin: 8px 0;">Kyoto Zen Cultural Sanctuary</h3>
+                        <p style="font-size: 0.85rem; color: #64748B;">Luxury Ryokan stay, private Onsen & tea master sessions.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #F1F5F9; padding-top: 12px;">
+                            <span style="font-size: 1.2rem; font-weight: 700; color: #0B192C;">$3,100</span>
+                            <button class="btn btn-candy add-to-cart" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fa-solid fa-plus"></i> Add Trip</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saved 2 -->
+                <div class="dest-card product-card" data-name="Dubai Executive Desert Gala" data-price="$4,200.00" data-img="images/dest_dubai.webp">
+                    <div style="height: 200px; overflow: hidden; position: relative;">
+                        <img src="images/dest_dubai.webp" alt="Dubai Desert" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span style="position: absolute; top: 12px; left: 12px; background: #D4AF37; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">DESERT GALA</span>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="font-size: 0.85rem; color: #64748B;"><i class="fa-solid fa-location-dot" style="color: #00A896;"></i> UAE &bull; 5 Days</div>
+                        <h3 style="font-size: 1.2rem; color: #0B192C; margin: 8px 0;">Dubai Executive Desert Gala</h3>
+                        <p style="font-size: 0.85rem; color: #64748B;">Luxury dune resort, supercar convoy & skyline gala cruise.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; border-top: 1px solid #F1F5F9; padding-top: 12px;">
+                            <span style="font-size: 1.2rem; font-weight: 700; color: #0B192C;">$4,200</span>
+                            <button class="btn btn-candy add-to-cart" style="padding: 6px 14px; font-size: 0.8rem;"><i class="fa-solid fa-plus"></i> Add Trip</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+        <!-- Footer -->
+    <footer style="background: #0B192C; color: #94A3B8; padding: 60px 0 30px; border-top: 3px solid #00A896;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #94A3B8;">Premier Destination Management Company specializing in corporate MICE travel, luxury bespoke itineraries, and VIP ground logistics.</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="404.html" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Twitter / X" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="404.html" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+                        <li><a href="shop.html" style="color: #94A3B8; text-decoration: none;">Destinations & Packages</a></li>
+                        <li><a href="about.html" style="color: #94A3B8; text-decoration: none;">DMC Services & Corporate MICE</a></li>
+                        <li><a href="blog.html" style="color: #94A3B8; text-decoration: none;">Travel Journal & Insights</a></li>
+                        <li><a href="contact.html" style="color: #94A3B8; text-decoration: none;">Request Proposal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #D4AF37; display: inline-block; padding-bottom: 5px;">Primary Headquarters</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color: #00A896; margin-right: 6px;"></i> Salem, Tamil Nadu, India</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #00A896; margin-right: 6px;"></i> concierge@auradmc.com</p>
+                    <p style="font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: #00A896; margin-right: 6px;"></i> +91 98765 43210</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Client Portals</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="dashboard.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-user-gear" style="color: #D4AF37;"></i> Traveler & Client Portal</a></li>
+                        <li><a href="admin-dashboard.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-chart-line" style="color: #00A896;"></i> DMC Operations Dashboard</a></li>
+                        <li><a href="influencer-dashboard.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-handshake" style="color: #D4AF37;"></i> Agent & Partner Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748B;">
+                <p>&copy; 2026 Aura Destination Management Company. All Rights Reserved. Salem, Tamil Nadu, India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/global-features.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

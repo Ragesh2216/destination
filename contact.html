@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a proposal from Aura Destination Management - Corporate MICE, VIP travel, custom ground logistics, and itinerary design.">
+    <title>Request Proposal & Contact | Aura Destination Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/animations.css?v=3">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <link rel="stylesheet" href="assets/css/candy.css">
+    <script src="assets/js/header.js"></script>
+
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #0B192C;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid #CBD5E1;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #0B192C;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00A896;
+            box-shadow: 0 0 0 3px rgba(0,168,150,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <stackly-header></stackly-header>
+
+    <!-- Main Content Area -->
+    <main style="padding-top: 80px;">
+        
+        <!-- Hero Banner -->
+        <section class="page-hero" style="background: linear-gradient(rgba(11,25,44,0.85), rgba(11,25,44,0.85)), url('images/dest_amalfi.jpg') center/cover; padding: 100px 0; text-align: center; color: #fff;">
+            <div class="container" data-aos="fade-up">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Start Your Journey</span>
+                <h1 style="font-size: 3.5rem; margin: 15px 0; font-family: 'Playfair Display', serif; color: #fff;">Request a Proposal</h1>
+                <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto; color: #CBD5E1;">Get a tailored itinerary proposal and budget blueprint from our destination specialists within 24 hours.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-padding" style="background: #FAF8F5; padding: 60px 0;">
+            <div class="container">
+                <div class="contact-layout">
+                    
+                    <!-- Proposal Request Form -->
+                    <div class="form-card" data-aos="fade-right">
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #0B192C; margin-bottom: 20px; border-bottom: 2px solid #F1F5F9; padding-bottom: 12px;">Custom Itinerary & MICE Inquiry</h2>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Thank you! Your proposal request has been received. An Aura DMC Destination Manager will contact you within 24 hours.');">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-user" style="color: #00A896;"></i> Your Full Name</label>
+                                    <input type="text" placeholder="e.g. Alexandra Vance" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-building" style="color: #00A896;"></i> Organization / Company</label>
+                                    <input type="text" placeholder="e.g. Apex Global Corp">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-envelope" style="color: #00A896;"></i> Business Email</label>
+                                    <input type="email" placeholder="alex@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-phone" style="color: #00A896;"></i> Phone Number</label>
+                                    <input type="tel" placeholder="+1 (555) 019-2834" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-earth-americas" style="color: #00A896;"></i> Target Destination</label>
+                                    <select>
+                                        <option>Swiss Alps & Europe Chalets</option>
+                                        <option>Maldives & Island Sanctuaries</option>
+                                        <option>Santorini & Aegean Coast</option>
+                                        <option>Kyoto & Cultural Japan</option>
+                                        <option>Dubai & Middle East Glamping</option>
+                                        <option>Amalfi Coast Yacht Charter</option>
+                                        <option>Custom Multi-Destination Route</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-briefcase" style="color: #00A896;"></i> Travel Style</label>
+                                    <select>
+                                        <option>Corporate MICE & Executive Retreat</option>
+                                        <option>VIP Luxury Private Villa & Yacht</option>
+                                        <option>High-Impact Incentive Trip</option>
+                                        <option>Custom Cultural & Wellness Tour</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-users" style="color: #00A896;"></i> Group Size</label>
+                                    <input type="number" placeholder="Number of attendees / travelers" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-calendar" style="color: #00A896;"></i> Estimated Travel Dates</label>
+                                    <input type="text" placeholder="e.g. October 15 - 22, 2026">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-pen-to-square" style="color: #00A896;"></i> Special Logistics & Requirements</label>
+                                <textarea rows="4" placeholder="Detail any specific ground transport, helicopter transfers, dietary requirements, private venue buyouts, or gala dinner themes..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-candy" style="width: 100%; justify-content: center; padding: 14px; font-size: 1rem; background: linear-gradient(135deg, #0B192C, #00A896); border-color: #D4AF37;">
+                                <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Submit Proposal Request
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar Offices & Info -->
+                    <div data-aos="fade-left">
+                        <div style="background: #fff; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; margin-bottom: 25px;">
+                            <h3 style="font-family: 'Playfair Display', serif; color: #0B192C; margin-bottom: 15px; border-bottom: 2px solid #F1F5F9; padding-bottom: 8px;">Global DMC Headquarters</h3>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h4 style="color: #00A896; font-size: 1.05rem; margin-bottom: 5px;"><i class="fa-solid fa-location-dot"></i> Salem Hub (Primary India HQ)</h4>
+                                <p style="color: #64748B; font-size: 0.9rem; line-height: 1.5;">Main Commercial Complex, Salem, Tamil Nadu, India<br>Phone: +91 98765 43210</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h4 style="color: #D4AF37; font-size: 1rem; margin-bottom: 5px;"><i class="fa-solid fa-location-dot"></i> Zurich Hub (Europe)</h4>
+                                <p style="color: #64748B; font-size: 0.9rem; line-height: 1.5;">Bahnhofstrasse 42, 8001 Zurich, Switzerland<br>Phone: +41 44 555 9000</p>
+                            </div>
+
+                            <div>
+                                <h4 style="color: #00A896; font-size: 1rem; margin-bottom: 5px;"><i class="fa-solid fa-location-dot"></i> Dubai Hub (Middle East)</h4>
+                                <p style="color: #64748B; font-size: 0.9rem; line-height: 1.5;">DIFC Gate Precinct 4, Dubai, UAE<br>Phone: +971 4 555 7711</p>
+                            </div>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #0B192C, #1E293B); color: #fff; padding: 30px; border-radius: 16px; text-align: center; border: 1px solid rgba(212,175,55,0.3);">
+                            <i class="fa-solid fa-headset" style="font-size: 2.5rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 10px;">24/7 VIP Travel Desk</h3>
+                            <p style="color: #CBD5E1; font-size: 0.9rem; margin-bottom: 15px;">Urgent ground changes or active itinerary inquiries for in-house guests.</p>
+                            <a href="tel:+18005552872" style="color: #00A896; font-weight: 700; font-size: 1.1rem; text-decoration: none; display: block;">+1 (800) 555-AURA</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+<!-- NEW SECTION C1: Instant Concierge Callback & WhatsApp Direct -->
+    <section class="section-padding" id="instant-connect" style="background: #FAF8F5; padding: 70px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div data-aos="fade-right" style="background: #fff; padding: 35px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <i class="fa-solid fa-phone-volume" style="font-size: 2.5rem; color: #00A896; margin-bottom: 15px;"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #0B192C; margin-bottom: 8px;">Request Instant 15-Min Callback</h3>
+                    <p style="color: #64748B; font-size: 0.9rem; margin-bottom: 20px;">Enter your phone number to receive a direct call from a Salem HQ Destination Manager.</p>
+                    <form onsubmit="event.preventDefault(); alert('Callback requested! A Destination Specialist will call your number within 15 minutes.');" style="display: flex; gap: 10px;">
+                        <input type="tel" placeholder="+91 98765 43210" required style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #CBD5E1;">
+                        <button type="submit" class="btn-candy" style="padding: 12px 20px;">Request Call</button>
+                    </form>
+                </div>
+
+                <div data-aos="fade-left" style="background: #fff; padding: 35px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366; margin-bottom: 15px;"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #0B192C; margin-bottom: 8px;">Direct 1-Tap WhatsApp Desk</h3>
+                    <p style="color: #64748B; font-size: 0.9rem; margin-bottom: 20px;">Chat instantly with our on-duty ground concierge for urgent transport or itinerary changes.</p>
+                    <a href="https://whatsapp.com" target="_blank" class="btn-candy" style="background: linear-gradient(135deg, #25D366, #128C7E); border-color: #25D366; width: 100%; justify-content: center; padding: 12px;">
+                        <i class="fa-brands fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> Open Live WhatsApp Chat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION C2: Salem India HQ & Regional Office Accordion -->
+    <section class="section-padding" id="office-details" style="background: #0B192C; color: #fff; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-city"></i> Global Office Locations</span>
+                <h2 style="font-size: 2.4rem; color: #fff; margin-top: 5px; font-family: 'Playfair Display', serif;">Salem Primary HQ & Regional Desks</h2>
+                <p style="color: #94A3B8; max-width: 600px; margin: 0 auto;">Direct contact details for our India Primary HQ and global hubs.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+                <div data-aos="fade-up" data-aos-delay="100" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 16px; border: 2px solid #00A896;">
+                    <span style="color: #00A896; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Primary Headquarters</span>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; margin: 8px 0;">Salem Hub (Tamil Nadu, India)</h3>
+                    <p style="color: #94A3B8; font-size: 0.88rem; line-height: 1.6;">Main Commercial Complex, Salem, Tamil Nadu 636001, India<br>Phone: +91 98765 43210<br>Hours: 24 Hours / 7 Days</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
+                    <span style="color: #D4AF37; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Europe Hub</span>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; margin: 8px 0;">Zurich Office (Switzerland)</h3>
+                    <p style="color: #94A3B8; font-size: 0.88rem; line-height: 1.6;">Bahnhofstrasse 42, 8001 Zurich, Switzerland<br>Phone: +41 44 555 9000<br>Hours: 08:00 - 20:00 CET</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
+                    <span style="color: #00A896; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Middle East Hub</span>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; margin: 8px 0;">Dubai Office (UAE)</h3>
+                    <p style="color: #94A3B8; font-size: 0.88rem; line-height: 1.6;">DIFC Gate Precinct 4, Dubai, UAE<br>Phone: +971 4 555 7711<br>Hours: 08:00 - 22:00 GST</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION C3: Frequently Asked Questions (FAQ Accordion) -->
+    <section class="section-padding" id="contact-faq" style="background: #ffffff; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+                <h2 style="font-size: 2.4rem; color: #0B192C; margin-top: 5px; font-family: 'Playfair Display', serif;">Frequently Asked Questions</h2>
+                <p style="color: #64748B; max-width: 600px; margin: 0 auto;">Everything you need to know about custom proposals, MICE bookings, and vouchers.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+                <details data-aos="fade-up" style="background: #FAF8F5; padding: 20px 25px; border-radius: 12px; border: 1px solid #E2E8F0; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.05rem; color: #0B192C; font-family: 'Playfair Display', serif;">How quickly will I receive a customized itinerary proposal?</summary>
+                    <p style="color: #64748B; font-size: 0.92rem; margin-top: 12px; line-height: 1.6;">Initial proposal blueprints with itemized flight, villa, and transport estimates are delivered within 24 hours of your inquiry. Complex MICE events for 100+ guests are delivered within 48 hours.</p>
+                </details>
+
+                <details data-aos="fade-up" style="background: #FAF8F5; padding: 20px 25px; border-radius: 12px; border: 1px solid #E2E8F0; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.05rem; color: #0B192C; font-family: 'Playfair Display', serif;">Do you manage corporate MICE events for 100+ delegates?</summary>
+                    <p style="color: #64748B; font-size: 0.92rem; margin-top: 12px; line-height: 1.6;">Yes. Our Salem India Command HQ has executed summits for up to 1,200 delegates in Dubai, Zurich, and Amalfi including charter flights, venue buyouts, and security escorts.</p>
+                </details>
+
+                <details data-aos="fade-up" style="background: #FAF8F5; padding: 20px 25px; border-radius: 12px; border: 1px solid #E2E8F0; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.05rem; color: #0B192C; font-family: 'Playfair Display', serif;">What payment options and deposit terms apply?</summary>
+                    <p style="color: #64748B; font-size: 0.92rem; margin-top: 12px; line-height: 1.6;">We accept wire transfers, major credit cards, and corporate purchase orders. An initial 20% refundable deposit locks in your itinerary dates and luxury fleet availability.</p>
+                </details>
+
+                <details data-aos="fade-up" style="background: #FAF8F5; padding: 20px 25px; border-radius: 12px; border: 1px solid #E2E8F0; cursor: pointer;">
+                    <summary style="font-weight: 700; font-size: 1.05rem; color: #0B192C; font-family: 'Playfair Display', serif;">What is your refund policy if travel schedules change?</summary>
+                    <p style="color: #64748B; font-size: 0.92rem; margin-top: 12px; line-height: 1.6;">Date modifications can be made free of charge up to 48 hours prior to departure. If cancelled 7+ days before arrival, deposits are 100% refunded immediately.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <footer style="background: #0B192C; color: #94A3B8; padding: 60px 0 30px; border-top: 3px solid #00A896;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #94A3B8;">Premier Destination Management Company specializing in corporate MICE travel, luxury bespoke itineraries, and VIP ground logistics.</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="404.html" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Twitter / X" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="404.html" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+                        <li><a href="shop.html" style="color: #94A3B8; text-decoration: none;">Destinations & Packages</a></li>
+                        <li><a href="about.html" style="color: #94A3B8; text-decoration: none;">DMC Services & Corporate MICE</a></li>
+                        <li><a href="blog.html" style="color: #94A3B8; text-decoration: none;">Travel Journal & Insights</a></li>
+                        <li><a href="contact.html" style="color: #94A3B8; text-decoration: none;">Request Proposal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #D4AF37; display: inline-block; padding-bottom: 5px;">Primary Headquarters</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color: #00A896; margin-right: 6px;"></i> Salem, Tamil Nadu, India</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #00A896; margin-right: 6px;"></i> concierge@auradmc.com</p>
+                    <p style="font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: #00A896; margin-right: 6px;"></i> +91 98765 43210</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Client Portals</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-user-gear" style="color: #D4AF37;"></i> Traveler & Client Portal</a></li>
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-chart-line" style="color: #00A896;"></i> DMC Operations Dashboard</a></li>
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-handshake" style="color: #D4AF37;"></i> Agent & Partner Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748B;">
+                <p>&copy; 2026 Aura Destination Management Company. All Rights Reserved. Salem, Tamil Nadu, India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/global-features.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

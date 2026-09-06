@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Destination Management Travel Journal - Expert insights on luxury travel, corporate MICE logistics, and global destination trends.">
+    <title>Travel Journal & Insights | Aura Destination Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/animations.css?v=3">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <link rel="stylesheet" href="assets/css/candy.css">
+    <script src="assets/js/header.js"></script>
+
+    <style>
+        .blog-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .blog-grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .post-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .post-img {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .post-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <stackly-header></stackly-header>
+
+    <!-- Main Content Area -->
+    <main style="padding-top: 80px;">
+        
+        <!-- Hero Banner -->
+        <section class="page-hero" style="background: linear-gradient(rgba(11,25,44,0.85), rgba(11,25,44,0.85)), url('images/dest_dubai.webp') center/cover; padding: 100px 0; text-align: center; color: #fff;">
+            <div class="container" data-aos="fade-up">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">DMC Field Reports & Trends</span>
+                <h1 style="font-size: 3.5rem; margin: 15px 0; font-family: 'Playfair Display', serif; color: #fff;">Travel Journal & Insights</h1>
+                <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto; color: #CBD5E1;">Expert perspectives on luxury destination management, MICE event planning, and VIP travel logistics.</p>
+            </div>
+        </section>
+
+        <!-- Blog Articles Layout -->
+        <section class="section-padding" style="background: #FAF8F5; padding: 60px 0;">
+            <div class="container">
+                <div class="blog-grid-layout">
+                    
+                    <!-- Articles Stream -->
+                    <div>
+                        
+                        <!-- Article 1 -->
+                        <article class="post-card" data-aos="fade-up">
+                            <div class="post-img">
+                                <img src="images/dest_swiss.webp" alt="Executive Retreat Destinations">
+                            </div>
+                            <div style="padding: 30px;">
+                                <div style="display: flex; gap: 15px; font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+                                    <span style="color: #00A896; font-weight: 700; text-transform: uppercase;"><i class="fa-solid fa-folder"></i> Corporate MICE</span>
+                                    <span>&bull; Sep 02, 2026</span>
+                                    <span>&bull; 5 min read</span>
+                                </div>
+                                <h2 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; color: #0B192C; margin-bottom: 15px;">Top 10 Executive Retreat Destinations for 2026</h2>
+                                <p style="color: #475569; line-height: 1.7; margin-bottom: 20px;">Discover how leading multinational firms are choosing isolated luxury retreats in the Swiss Alps, private overwater islands in the Maldives, and desert sanctuaries in Oman to foster high-level strategic alignment.</p>
+                                <a href="404.html" class="btn-candy" style="padding: 10px 20px; font-size: 0.85rem;">Read Full Guide &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="post-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="post-img">
+                                <img src="images/dest_corporate.webp" alt="MICE Logistics">
+                            </div>
+                            <div style="padding: 30px;">
+                                <div style="display: flex; gap: 15px; font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+                                    <span style="color: #00A896; font-weight: 700; text-transform: uppercase;"><i class="fa-solid fa-folder"></i> Event Operations</span>
+                                    <span>&bull; Aug 24, 2026</span>
+                                    <span>&bull; 7 min read</span>
+                                </div>
+                                <h2 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; color: #0B192C; margin-bottom: 15px;">How Turnkey DMC Logistics Streamline 500+ Attendee Conferences</h2>
+                                <p style="color: #475569; line-height: 1.7; margin-bottom: 20px;">A deep dive into airport VIP customs clearances, synchronized coach fleets, hotel block allocations, and gala dinner staging along the Amalfi Coast.</p>
+                                <a href="404.html" class="btn-candy" style="padding: 10px 20px; font-size: 0.85rem;">Read Full Guide &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="post-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="post-img">
+                                <img src="images/dest_kyoto.webp" alt="Kyoto Ryokan">
+                            </div>
+                            <div style="padding: 30px;">
+                                <div style="display: flex; gap: 15px; font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+                                    <span style="color: #00A896; font-weight: 700; text-transform: uppercase;"><i class="fa-solid fa-folder"></i> Cultural Travel</span>
+                                    <span>&bull; Aug 10, 2026</span>
+                                    <span>&bull; 4 min read</span>
+                                </div>
+                                <h2 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; color: #0B192C; margin-bottom: 15px;">Navigating Heritage Ryokan Hospitality & Private Onsen Etiquette</h2>
+                                <p style="color: #475569; line-height: 1.7; margin-bottom: 20px;">An essential guide for discerning travelers seeking authentic Japanese luxury, private tea master access, and serene bamboo grove retreats in Kyoto.</p>
+                                <a href="404.html" class="btn-candy" style="padding: 10px 20px; font-size: 0.85rem;">Read Full Guide &rarr;</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside>
+                        <div style="background: #fff; padding: 25px; border-radius: 16px; border: 1px solid #E2E8F0; margin-bottom: 30px;">
+                            <h3 style="font-size: 1.1rem; color: #0B192C; margin-bottom: 15px; font-family: 'Playfair Display', serif; border-bottom: 2px solid #F1F5F9; padding-bottom: 8px;">Categories</h3>
+                            <ul style="list-style: none; padding: 0; line-height: 2.2; color: #475569; font-size: 0.95rem;">
+                                <li><a href="404.html" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-angle-right" style="color: #00A896;"></i> Corporate MICE Logistics (14)</a></li>
+                                <li><a href="404.html" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-angle-right" style="color: #00A896;"></i> Luxury Island Retreats (22)</a></li>
+                                <li><a href="404.html" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-angle-right" style="color: #00A896;"></i> Alpine & Ski Expeditions (18)</a></li>
+                                <li><a href="404.html" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-angle-right" style="color: #00A896;"></i> Private Yacht Charters (11)</a></li>
+                                <li><a href="404.html" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-angle-right" style="color: #00A896;"></i> Cultural Immersion (16)</a></li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #0B192C, #1E293B); color: #fff; padding: 30px; border-radius: 16px; border: 1px solid rgba(212,175,55,0.3);">
+                            <h3 style="font-size: 1.2rem; color: #D4AF37; margin-bottom: 10px; font-family: 'Playfair Display', serif;"><i class="fa-solid fa-paper-plane"></i> DMC Insights Newsletter</h3>
+                            <p style="font-size: 0.85rem; color: #CBD5E1; margin-bottom: 15px;">Subscribe to receive quarterly destination market reports and private venue releases.</p>
+                            <input type="email" placeholder="Enter your business email" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #334155; background: #0B192C; color: #fff; margin-bottom: 12px; font-size: 0.9rem;">
+                            <button class="btn-candy" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #D4AF37, #B38F24);">Subscribe Now</button>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+<!-- NEW SECTION B1: Editor's Choice Featured Travel Story -->
+    <section class="section-padding" id="editors-pick" style="background: #FAF8F5; padding: 70px 0;">
+        <div class="container">
+            <div data-aos="fade-up" style="background: linear-gradient(135deg, #0B192C, #1E293B); color: #fff; border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: center; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                <div style="padding: 40px;">
+                    <span style="background: #00A896; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase;">Editor's Pick</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #fff; margin: 15px 0;">The 2026 MICE Travel Report: Sustainable Luxury & Private Charters</h2>
+                    <p style="color: #CBD5E1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Discover how fortune 500 companies are restructuring corporate summits to incorporate carbon-neutral private flights and local cultural immersion.</p>
+                    <a href="404.html" class="btn-candy" style="padding: 10px 22px; font-size: 0.9rem;">Read Full Report <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div style="height: 100%; min-height: 320px;">
+                    <img src="images/blog_1.webp" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION B2: Destination Guides & Seasonal Trends -->
+    <section class="section-padding" id="guides-grid" style="background: #ffffff; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-compass"></i> Travel Guides</span>
+                <h2 style="font-size: 2.4rem; color: #0B192C; margin-top: 5px; font-family: 'Playfair Display', serif;">Curated Travel Insights & Destination Advice</h2>
+                <p style="color: #64748B; max-width: 600px; margin: 0 auto;">Expert guidance from our ground directors in Zurich, Dubai, Kyoto, and Salem.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div data-aos="fade-up" data-aos-delay="100" style="background: #fff; border-radius: 16px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <img src="images/dest_swiss.webp" alt="Swiss Alps Guide" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <span style="color: #00A896; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Alpine Expeditions</span>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #0B192C; margin: 8px 0;">Swiss Alps Helicopter Skiing & Chalet Living</h3>
+                        <p style="color: #64748B; font-size: 0.88rem; line-height: 1.5; margin-bottom: 15px;">How to book private helipads and Michelin-star dining in Zermatt & St. Moritz.</p>
+                        <a href="404.html" style="color: #00A896; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" style="background: #fff; border-radius: 16px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <img src="images/dest_kyoto.webp" alt="Kyoto Guide" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <span style="color: #D4AF37; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Cultural Immersion</span>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #0B192C; margin: 8px 0;">Kyoto Cherry Blossom Luxury Ryokan Itineraries</h3>
+                        <p style="color: #64748B; font-size: 0.88rem; line-height: 1.5; margin-bottom: 15px;">Private temple buyouts, geisha tea ceremonies, and Bullet Train VIP passes.</p>
+                        <a href="404.html" style="color: #00A896; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" style="background: #fff; border-radius: 16px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <img src="images/dest_dubai.webp" alt="Dubai MICE Guide" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <span style="color: #00A896; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">MICE Logistics</span>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #0B192C; margin: 8px 0;">Staging 500+ Gala Dinners in Dubai</h3>
+                        <p style="color: #64748B; font-size: 0.88rem; line-height: 1.5; margin-bottom: 15px;">Key considerations for permits, desert staging, and luxury fleet escorts.</p>
+                        <a href="404.html" style="color: #00A896; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION B3: Subscribe to DMC Journal -->
+    <section class="section-padding" id="newsletter" style="background: #0B192C; color: #fff; padding: 70px 0;">
+        <div class="container">
+            <div data-aos="fade-up" style="max-width: 650px; margin: 0 auto; text-align: center;">
+                <i class="fa-solid fa-envelope-open-text" style="font-size: 3rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                <h2 style="font-size: 2.2rem; color: #fff; font-family: 'Playfair Display', serif; margin-bottom: 10px;">Subscribe to the DMC Journal</h2>
+                <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 25px;">Get exclusive private charter deals, new villa additions, and seasonal MICE rates delivered monthly.</p>
+
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Aura DMC Insider Journal!');" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <input type="email" placeholder="Enter your executive email address..." required style="flex: 1; min-width: 260px; padding: 14px 18px; border-radius: 30px; border: 1px solid #334155; background: rgba(255,255,255,0.08); color: #fff; font-family: 'Inter', sans-serif;">
+                    <button type="submit" class="btn-candy" style="padding: 14px 28px; border-radius: 30px; background: linear-gradient(135deg, #00A896, #028090); border-color: #00A896;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer style="background: #0B192C; color: #94A3B8; padding: 60px 0 30px; border-top: 3px solid #00A896;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #94A3B8;">Premier Destination Management Company specializing in corporate MICE travel, luxury bespoke itineraries, and VIP ground logistics.</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="404.html" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Twitter / X" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="404.html" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+                        <li><a href="shop.html" style="color: #94A3B8; text-decoration: none;">Destinations & Packages</a></li>
+                        <li><a href="about.html" style="color: #94A3B8; text-decoration: none;">DMC Services & Corporate MICE</a></li>
+                        <li><a href="blog.html" style="color: #94A3B8; text-decoration: none;">Travel Journal & Insights</a></li>
+                        <li><a href="contact.html" style="color: #94A3B8; text-decoration: none;">Request Proposal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #D4AF37; display: inline-block; padding-bottom: 5px;">Primary Headquarters</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color: #00A896; margin-right: 6px;"></i> Salem, Tamil Nadu, India</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #00A896; margin-right: 6px;"></i> concierge@auradmc.com</p>
+                    <p style="font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: #00A896; margin-right: 6px;"></i> +91 98765 43210</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Client Portals</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-user-gear" style="color: #D4AF37;"></i> Traveler & Client Portal</a></li>
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-chart-line" style="color: #00A896;"></i> DMC Operations Dashboard</a></li>
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-handshake" style="color: #D4AF37;"></i> Agent & Partner Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748B;">
+                <p>&copy; 2026 Aura Destination Management Company. All Rights Reserved. Salem, Tamil Nadu, India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/global-features.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

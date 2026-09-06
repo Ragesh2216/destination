@@ -1,0 +1,385 @@
+/* ==========================================================================
+   Stackly Header / Navigation Stylesheet (Shared across Storefront & Dashboards)
+   ========================================================================== */
+
+/* Header Root Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08) !important;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled, header.sticky {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 100005 !important;
+}
+
+.nav-logo-img, .logo img {
+    height: 42px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Nav Links List */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0B192C !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.nav-active {
+    color: #00A896 !important;
+}
+
+/* Styled Login Button in Navbar */
+.nav-links a.btn-login-nav, .nav-icons a.btn-login-nav {
+    background: linear-gradient(135deg, #0B192C 0%, #00A896 100%) !important;
+    color: #ffffff !important;
+    padding: 8px 22px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    font-size: 0.85rem !important;
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.25) !important;
+    border: 1px solid rgba(212, 175, 55, 0.5) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    text-decoration: none !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.nav-links a.btn-login-nav:hover, .nav-icons a.btn-login-nav:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(0, 168, 150, 0.4) !important;
+    color: #ffffff !important;
+}
+
+/* Nav Icons Row */
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+    z-index: 100005 !important;
+}
+
+/* ===== FULL SCREEN MOBILE & TABLET HEADER RESPONSIVENESS ===== */
+@media (max-width: 992px) {
+    /* Full Screen Mobile/Tablet Menu Overlay */
+    .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: 100vh !important;
+        background: #ffffff !important; /* Constant Solid White Background */
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 90px 24px 50px 24px !important;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.12) !important;
+        overflow-y: auto !important;
+        z-index: 100001 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transform: scale(0.96) translateY(-10px) !important;
+        gap: 16px !important;
+    }
+
+    .nav-links.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: scale(1) translateY(0) !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+        max-width: 340px;
+        text-align: center;
+    }
+
+    .nav-links li a, .nav-links a {
+        display: block !important;
+        padding: 14px 20px !important;
+        font-size: 1.25rem !important;
+        font-family: 'Playfair Display', serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 2px !important;
+        border-bottom: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        color: #0B192C !important;
+        text-transform: uppercase !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+    }
+
+    .nav-links li a:hover, .nav-links li a.nav-active, .nav-links a.nav-active {
+        color: #00A896 !important;
+        transform: scale(1.04) !important;
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none !important;
+    }
+
+    .nav-links a.btn-login-nav {
+        margin-top: 10px !important;
+        width: 100% !important;
+        padding: 14px 24px !important;
+        font-size: 1rem !important;
+        justify-content: center !important;
+        background: linear-gradient(135deg, #0B192C 0%, #00A896 100%) !important;
+        color: #ffffff !important;
+        border-radius: 30px !important;
+        border: none !important;
+    }
+
+    /* Light Backdrop Overlay behind Mobile Menu */
+    .menu-overlay {
+        position: fixed !important;
+        inset: 0 !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        z-index: 100000 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.35s ease, visibility 0.35s ease !important;
+    }
+
+    .menu-overlay.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Mobile Toggle Hamburger Button */
+    .mobile-menu-btn, button.mobile-menu-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 100005 !important;
+        touch-action: manipulation !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+
+    .hamburger-icon span {
+        display: block !important;
+        position: absolute !important;
+        height: 3px !important;
+        width: 26px !important;
+        background: #0B192C !important;
+        border-radius: 3px !important;
+        opacity: 1 !important;
+        left: 11px !important;
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, top 0.3s ease !important;
+    }
+
+    .hamburger-icon span:nth-child(1) { top: 14px !important; }
+    .hamburger-icon span:nth-child(2) { top: 22px !important; }
+    .hamburger-icon span:nth-child(3) { top: 30px !important; }
+
+    .hamburger-icon[aria-expanded="true"] span {
+        background: #0B192C !important;
+    }
+
+    .hamburger-icon[aria-expanded="true"] span:nth-child(1) {
+        top: 22px !important;
+        transform: rotate(45deg) !important;
+    }
+
+    .hamburger-icon[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0 !important;
+        transform: translateX(-15px) !important;
+    }
+
+    .hamburger-icon[aria-expanded="true"] span:nth-child(3) {
+        top: 22px !important;
+        transform: rotate(-45deg) !important;
+    }
+
+    /* Hide desktop-only elements in mobile header */
+    .nav-icons .btn-candy {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: list-item !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-icons a.btn-login-nav {
+        padding: 6px 14px !important;
+        font-size: 0.78rem !important;
+        letter-spacing: 0.5px !important;
+    }
+}
+
+/* Hide toggle menu and mobile-only items strictly in Desktop view (> 992px) */
+@media (min-width: 993px) {
+    .mobile-menu-btn, .hamburger-icon {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   LUXURY SITE PRELOADER SCREEN (stackly_logo.webp)
+   ========================================================================== */
+.site-preloader {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #0B192C !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 9999999 !important;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.site-preloader.fade-out {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.preloader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.preloader-logo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.preloader-logo-img {
+    height: 65px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    animation: preloaderPulse 1.6s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 15px rgba(0, 168, 150, 0.5));
+}
+
+@keyframes preloaderPulse {
+    0% {
+        transform: scale(0.95);
+        filter: drop-shadow(0 0 8px rgba(0, 168, 150, 0.3));
+    }
+    100% {
+        transform: scale(1.06);
+        filter: drop-shadow(0 0 22px rgba(0, 168, 150, 0.8));
+    }
+}
+
+.preloader-bar {
+    width: 160px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.preloader-progress {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #00A896 0%, #D4AF37 50%, #00A896 100%);
+    animation: preloaderBar 1.4s infinite linear;
+}
+
+@keyframes preloaderBar {
+    0% { left: -100%; }
+    50% { left: 0%; }
+    100% { left: 100%; }
+}
+
+.preloader-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #00A896;
+    text-transform: uppercase;
+    opacity: 0.9;
+}

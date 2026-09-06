@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Destination Management Company - Luxury destination packages, corporate MICE travel logistics, VIP concierge, and bespoke global itineraries.">
+    <title>Aura Destination Management | Bespoke Global Journeys & Corporate MICE</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/animations.css?v=3">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <link rel="stylesheet" href="assets/css/category-flip.css">
+    <link rel="stylesheet" href="assets/css/candy.css">
+    <script src="assets/js/header.js"></script>
+    <link rel="stylesheet" href="assets/css/header.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Header -->
+    <stackly-header></stackly-header>
+
+    <!-- Ultimate Hero Slider Section -->
+    <section class="premium-hero" id="home">
+        <!-- Particles Container -->
+        <div id="hero-particles"></div>
+        
+        <div class="hero-slider-wrapper">
+            <!-- Slide 1 (Maldives) -->
+            <div class="hero-slide active" data-bg="#0B192C">
+                <div class="hero-col-visual">
+                    <div class="hero-model-box slide-anim-up" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                        <img src="images/dest_maldives.webp" alt="Maldives Overwater Sanctuary" class="hero-small-model" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="hero-col-content slide-anim-left">
+                    <div class="hero-text-block" style="color: #fff;">
+                        <div class="subheading" style="color: #00A896; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Private Island & Overwater Sanctuary</div>
+                        <h1 style="color: #fff; font-size: 3rem; margin: 10px 0;">Maldives Paradise Retreat</h1>
+                        <p class="desc" style="color: #E2E8F0; font-size: 1.1rem; max-width: 540px;">Crystal clear turquoise lagoons, private hydroplane transfers, and dedicated 24/7 island concierge for an unforgettable getaway.</p>
+                        <div class="hero-actions" style="margin-top: 25px; display: flex; gap: 15px;">
+                            <a href="404.html" class="btn btn-candy" style="padding: 12px 30px; font-size: 1rem;"><i class="fa-solid fa-compass" style="margin-right: 8px;"></i> Explore Package</a>
+                            <a href="404.html" class="btn btn-outline" style="border: 2px solid #00A896; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600;">Request Custom Proposal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 (Swiss Alps) -->
+            <div class="hero-slide" data-bg="#1E293B">
+                <div class="hero-col-visual">
+                    <div class="hero-model-box slide-anim-up" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                        <img src="images/dest_swiss.webp" alt="Swiss Alps Luxury Chalet" class="hero-small-model" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="hero-col-content slide-anim-left">
+                    <div class="hero-text-block" style="color: #fff;">
+                        <div class="subheading" style="color: #D4AF37; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Alpine Lodge & Heli-Skiing</div>
+                        <h1 style="color: #fff; font-size: 3rem; margin: 10px 0;">Swiss Alps Executive Chalet</h1>
+                        <p class="desc" style="color: #E2E8F0; font-size: 1.1rem; max-width: 540px;">Panoramic mountain thermal spas, private ski instructors, luxury fireside dining, and private helicopter glacier tours.</p>
+                        <div class="hero-actions" style="margin-top: 25px; display: flex; gap: 15px;">
+                            <a href="404.html" class="btn btn-candy" style="padding: 12px 30px; font-size: 1rem;"><i class="fa-solid fa-compass" style="margin-right: 8px;"></i> Explore Package</a>
+                            <a href="404.html" class="btn btn-outline" style="border: 2px solid #D4AF37; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600;">Book Chalet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 (Santorini) -->
+            <div class="hero-slide" data-bg="#0B192C">
+                <div class="hero-col-visual">
+                    <div class="hero-model-box slide-anim-up" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                        <img src="images/dest_santorini.webp" alt="Santorini Sunset Retreat" class="hero-small-model" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="hero-col-content slide-anim-left">
+                    <div class="hero-text-block" style="color: #fff;">
+                        <div class="subheading" style="color: #00A896; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Mediterranean Cliffside & Catamaran Voyage</div>
+                        <h1 style="color: #fff; font-size: 3rem; margin: 10px 0;">Santorini Sunset Villa</h1>
+                        <p class="desc" style="color: #E2E8F0; font-size: 1.1rem; max-width: 540px;">Iconic blue dome caldera views, private infinity pools, Aegean sunset catamaran charters, and bespoke Greek wine tastings.</p>
+                        <div class="hero-actions" style="margin-top: 25px; display: flex; gap: 15px;">
+                            <a href="404.html" class="btn btn-candy" style="padding: 12px 30px; font-size: 1rem;"><i class="fa-solid fa-compass" style="margin-right: 8px;"></i> Explore Package</a>
+                            <a href="404.html" class="btn btn-outline" style="border: 2px solid #00A896; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600;">Plan Voyage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 (Kyoto) -->
+            <div class="hero-slide" data-bg="#0F172A">
+                <div class="hero-col-visual">
+                    <div class="hero-model-box slide-anim-up" style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                        <img src="images/dest_kyoto.webp" alt="Kyoto Zen Sanctuary" class="hero-small-model" style="width: 100%; height: 380px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="hero-col-content slide-anim-left">
+                    <div class="hero-text-block" style="color: #fff;">
+                        <div class="subheading" style="color: #D4AF37; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Ancient Bamboo Forest & Luxury Ryokan</div>
+                        <h1 style="color: #fff; font-size: 3rem; margin: 10px 0;">Kyoto Zen Cultural Retreat</h1>
+                        <p class="desc" style="color: #E2E8F0; font-size: 1.1rem; max-width: 540px;">Immerse in private tea ceremonies, traditional hot spring Onsen sanctuaries, and exclusive access to heritage pagodas.</p>
+                        <div class="hero-actions" style="margin-top: 25px; display: flex; gap: 15px;">
+                            <a href="404.html" class="btn btn-candy" style="padding: 12px 30px; font-size: 1rem;"><i class="fa-solid fa-compass" style="margin-right: 8px;"></i> Explore Package</a>
+                            <a href="404.html" class="btn btn-outline" style="border: 2px solid #D4AF37; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600;">Reserve Experience</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column Thumbnails -->
+        <div class="hero-col-right">
+            <div class="hero-thumbs">
+                <div class="hero-thumb active" data-index="0">
+                    <img src="images/dest_maldives.webp" alt="Maldives">
+                </div>
+                <div class="hero-thumb" data-index="1">
+                    <img src="images/dest_swiss.webp" alt="Swiss Alps">
+                </div>
+                <div class="hero-thumb" data-index="2">
+                    <img src="images/dest_santorini.webp" alt="Santorini">
+                </div>
+                <div class="hero-thumb" data-index="3">
+                    <img src="images/dest_kyoto.webp" alt="Kyoto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Destination Search Bar -->
+    <section style="background: linear-gradient(135deg, #0B192C, #1E293B); padding: 25px 0; border-bottom: 2px solid rgba(212,175,55,0.3);">
+        <div class="container">
+            <form action="shop.html" method="GET" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 160px; gap: 15px; align-items: center; background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+                <div>
+                    <label style="color: #00A896; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px;"><i class="fa-solid fa-earth-americas"></i> Destination Region</label>
+                    <select name="region" style="width: 100%; padding: 10px 14px; background: rgba(11,25,44,0.9); border: 1px solid #334155; border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif;">
+                        <option value="all">All Regions Worldwide</option>
+                        <option value="europe">Europe & Mediterranean</option>
+                        <option value="asia">Asia-Pacific & Islands</option>
+                        <option value="middle-east">Middle East & Africa</option>
+                        <option value="americas">Americas & Caribbean</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="color: #00A896; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px;"><i class="fa-solid fa-briefcase"></i> Experience Type</label>
+                    <select name="type" style="width: 100%; padding: 10px 14px; background: rgba(11,25,44,0.9); border: 1px solid #334155; border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif;">
+                        <option value="all">All Trip Styles</option>
+                        <option value="corporate">Corporate MICE & Retreat</option>
+                        <option value="luxury">Luxury Villa & Island</option>
+                        <option value="adventure">Alpine & Expedition</option>
+                        <option value="yacht">Private Yacht & Gala</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="color: #00A896; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px;"><i class="fa-solid fa-user-group"></i> Group Size</label>
+                    <select name="guests" style="width: 100%; padding: 10px 14px; background: rgba(11,25,44,0.9); border: 1px solid #334155; border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif;">
+                        <option value="vip">1 - 4 VIP Travelers</option>
+                        <option value="small">5 - 20 Executive Group</option>
+                        <option value="mice">21 - 100 MICE Attendees</option>
+                        <option value="large">100+ Corporate Gala</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="color: #00A896; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px;"><i class="fa-solid fa-calendar-days"></i> Travel Season</label>
+                    <input type="text" placeholder="e.g. Q4 2026" style="width: 100%; padding: 10px 14px; background: rgba(11,25,44,0.9); border: 1px solid #334155; border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif;">
+                </div>
+                <div style="margin-top: auto;">
+                    <button type="submit" class="btn-candy" style="width: 100%; padding: 12px 10px; border-radius: 8px; justify-content: center; background: linear-gradient(135deg, #D4AF37, #B38F24);"><i class="fa-solid fa-magnifying-glass" style="margin-right: 6px;"></i> Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Destination Regions & DMC Services -->
+    <section class="shop-categories section-padding" id="categories" style="background-color: var(--color-beige);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 40px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Global DMC Footprint</span>
+                <h2 style="font-size: 2.4rem; color: #0B192C; margin-top: 5px;">Curated Global Destinations</h2>
+                <p style="color: #64748B;">Explore our signature destination regions managed by certified local ground experts</p>
+            </div>
+            <div class="category-grid">
+                <!-- Europe & Alps -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="cat-img">
+                                <img src="images/dest_swiss.webp" alt="Swiss Alps & Europe" loading="lazy">
+                            </div>
+                            <div class="cat-name">
+                                <h3>Europe & Alpine Chalets</h3>
+                                <span class="cat-hint">Explore Destinations &rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="card-back" style="background: #0B192C; color: #fff; padding: 25px;">
+                            <h4 style="color: #D4AF37;">Europe & Alpine Retreats</h4>
+                            <p class="cat-back-desc" style="color: #CBD5E1;">Swiss Alps chalets, French Riviera villas, and Amalfi coast yacht expeditions.</p>
+                            <ul class="cat-back-list" style="margin: 15px 0; font-size: 0.9rem; color: #94A3B8;">
+                                <li>&bull; Private ski chalets & thermal spas</li>
+                                <li>&bull; Mediterranean yacht charter routes</li>
+                                <li>&bull; Historic castle venue buyouts</li>
+                            </ul>
+                            <a href="404.html" class="btn-flip-explore" style="color: #00A896; font-weight: 700;">View Packages &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tropical Island Escapes -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="cat-img">
+                                <img src="images/dest_maldives.webp" alt="Tropical Islands" loading="lazy">
+                            </div>
+                            <div class="cat-name">
+                                <h3>Tropical Island Escapes</h3>
+                                <span class="cat-hint">Explore Destinations &rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="card-back" style="background: #0B192C; color: #fff; padding: 25px;">
+                            <h4 style="color: #00A896;">Tropical Island Escapes</h4>
+                            <p class="cat-back-desc" style="color: #CBD5E1;">Exclusive private islands in the Maldives, Bali sanctuaries, and French Polynesia.</p>
+                            <ul class="cat-back-list" style="margin: 15px 0; font-size: 0.9rem; color: #94A3B8;">
+                                <li>&bull; Overwater bungalow sanctuaries</li>
+                                <li>&bull; Private hydroplane & speedboat transfers</li>
+                                <li>&bull; Coral reef diving & sunset yachting</li>
+                            </ul>
+                            <a href="404.html?region=asia" class="btn-flip-explore" style="color: #00A896; font-weight: 700;">View Packages &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mediterranean Coast -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="cat-img">
+                                <img src="images/dest_santorini.webp" alt="Mediterranean Bliss" loading="lazy">
+                            </div>
+                            <div class="cat-name">
+                                <h3>Mediterranean Bliss</h3>
+                                <span class="cat-hint">Explore Destinations &rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="card-back" style="background: #0B192C; color: #fff; padding: 25px;">
+                            <h4 style="color: #D4AF37;">Mediterranean Bliss</h4>
+                            <p class="cat-back-desc" style="color: #CBD5E1;">Santorini cliffside infinity pools, Capri luxury villas, and Ibiza retreats.</p>
+                            <ul class="cat-back-list" style="margin: 15px 0; font-size: 0.9rem; color: #94A3B8;">
+                                <li>&bull; Caldera view luxury suites</li>
+                                <li>&bull; Catamaran sunset expeditions</li>
+                                <li>&bull; Michelin-starred coastal dining</li>
+                            </ul>
+                            <a href="404.html?region=europe" class="btn-flip-explore" style="color: #00A896; font-weight: 700;">View Packages &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asian Cultural Sanctuaries -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="cat-img">
+                                <img src="images/dest_kyoto.webp" alt="Kyoto Cultural" loading="lazy">
+                            </div>
+                            <div class="cat-name">
+                                <h3>Asian Cultural Sanctuaries</h3>
+                                <span class="cat-hint">Explore Destinations &rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="card-back" style="background: #0B192C; color: #fff; padding: 25px;">
+                            <h4 style="color: #00A896;">Asian Cultural Sanctuaries</h4>
+                            <p class="cat-back-desc" style="color: #CBD5E1;">Kyoto heritage Ryokans, Chiang Mai wellness retreats, and Vietnam cruises.</p>
+                            <ul class="cat-back-list" style="margin: 15px 0; font-size: 0.9rem; color: #94A3B8;">
+                                <li>&bull; Traditional Onsen thermal baths</li>
+                                <li>&bull; Private tea ceremony masters</li>
+                                <li>&bull; Heritage UNESCO guided routes</li>
+                            </ul>
+                            <a href="404.html?region=asia" class="btn-flip-explore" style="color: #00A896; font-weight: 700;">View Packages &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle East & Desert Retreats -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="cat-img">
+                                <img src="images/dest_dubai.webp" alt="Middle East Desert" loading="lazy">
+                            </div>
+                            <div class="cat-name">
+                                <h3>Middle East & Desert Retreats</h3>
+                                <span class="cat-hint">Explore Destinations &rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="card-back" style="background: #0B192C; color: #fff; padding: 25px;">
+                            <h4 style="color: #D4AF37;">Middle East & Desert Luxury</h4>
+                            <p class="cat-back-desc" style="color: #CBD5E1;">Dubai desert glamping, Abu Dhabi corporate galas, and Oman mountain resorts.</p>
+                            <ul class="cat-back-list" style="margin: 15px 0; font-size: 0.9rem; color: #94A3B8;">
+                                <li>&bull; Supercar & helicopter transfers</li>
+                                <li>&bull; Luxury desert dune dining</li>
+                                <li>&bull; High-capacity corporate venues</li>
+                            </ul>
+                            <a href="404.html?region=middle-east" class="btn-flip-explore" style="color: #00A896; font-weight: 700;">View Packages &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate MICE & Galas -->
+                <div class="category-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="cat-img">
+                                <img src="images/dest_corporate.webp" alt="Corporate MICE" loading="lazy">
+                            </div>
+                            <div class="cat-name">
+                                <h3>Corporate MICE & Galas</h3>
+                                <span class="cat-hint">Explore Services &rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="card-back" style="background: #0B192C; color: #fff; padding: 25px;">
+                            <h4 style="color: #00A896;">Corporate MICE & Events</h4>
+                            <p class="cat-back-desc" style="color: #CBD5E1;">Turnkey conference logistics, executive retreats, team building, and gala dinners.</p>
+                            <ul class="cat-back-list" style="margin: 15px 0; font-size: 0.9rem; color: #94A3B8;">
+                                <li>&bull; End-to-end event logistics</li>
+                                <li>&bull; Group flight & hotel block management</li>
+                                <li>&bull; Dedicated ground ops coordinator</li>
+                            </ul>
+                            <a href="404.html" class="btn-flip-explore" style="color: #00A896; font-weight: 700;">Learn DMC Services &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers - Signature Destination Packages -->
+    <section class="pro-bestsellers-section" id="best-sellers" style="padding: 80px 0; background: #0B192C; color: #fff; position: relative;">
+        <div class="container">
+            <div class="bs-header" data-aos="fade-up" style="text-align: center; margin-bottom: 40px;">
+                <div class="bs-label-pill" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0,168,150,0.15); color: #00A896; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid rgba(0,168,150,0.4);">
+                    <span class="bs-label-dot" style="width: 8px; height: 8px; background: #00A896; border-radius: 50%;"></span>
+                    <span>Most Popular Destination Experiences</span>
+                </div>
+                <h2 class="bs-title" style="font-size: 2.5rem; color: #fff; margin: 15px 0;">Handcrafted <em>Destination Packages</em></h2>
+                <p class="bs-subtitle" style="color: #94A3B8;">Top-rated luxury itineraries, fully customizable for individuals, VIPs, and corporate groups</p>
+                
+                <div class="bs-stats-bar" data-aos="fade-up" data-aos-delay="100" style="display: flex; justify-content: center; gap: 40px; margin-top: 25px; flex-wrap: wrap;">
+                    <div class="bs-stat">
+                        <span class="bs-stat-num" style="font-size: 1.8rem; font-weight: 700; color: #D4AF37;">50+</span>
+                        <span class="bs-stat-lbl" style="display: block; font-size: 0.85rem; color: #CBD5E1;">Global Hubs</span>
+                    </div>
+                    <div class="bs-stat">
+                        <span class="bs-stat-num" style="font-size: 1.8rem; font-weight: 700; color: #00A896;">12,400+</span>
+                        <span class="bs-stat-lbl" style="display: block; font-size: 0.85rem; color: #CBD5E1;">Travelers Managed</span>
+                    </div>
+                    <div class="bs-stat">
+                        <span class="bs-stat-num" style="font-size: 1.8rem; font-weight: 700; color: #D4AF37;">99.8%</span>
+                        <span class="bs-stat-lbl" style="display: block; font-size: 0.85rem; color: #CBD5E1;">Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bs-product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+
+                <!-- Package 1 - Maldives -->
+                <div class="bs-product-card" data-category="asia" data-aos="fade-up" data-aos-delay="100"
+                     data-name="Maldives Overwater Sanctuary" data-price="$3,450.00" data-rating="5" data-reviews="148"
+                     data-desc="7 Days / 6 Nights luxury overwater bungalow package. Includes private hydroplane arrival, 24/7 island butler, sunset yacht excursion, and daily spa sessions."
+                     data-img="images/dest_maldives.webp" style="background: #1E293B; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="bs-rank-badge bs-rank-gold" style="position: absolute; top: 15px; left: 15px; z-index: 2; background: #D4AF37; color: #000; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;"><i class="fa-solid fa-crown"></i> #1 Choice</div>
+                    <div class="bs-img-zone" style="height: 220px; overflow: hidden; position: relative;">
+                        <img src="images/dest_maldives.webp" alt="Maldives Overwater Sanctuary" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="bs-card-body" style="padding: 20px;">
+                        <div class="bs-card-top" style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="bs-category-tag" style="color: #00A896; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Tropical Island &bull; 7 Days</span>
+                            <div class="bs-stars" style="color: #D4AF37; font-size: 0.85rem;">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span style="color: #94A3B8; margin-left: 4px;">(148)</span>
+                            </div>
+                        </div>
+                        <h3 class="bs-product-name" style="color: #fff; font-size: 1.3rem; margin: 10px 0 6px;">Maldives Overwater Sanctuary</h3>
+                        <p class="bs-product-desc" style="color: #94A3B8; font-size: 0.9rem; line-height: 1.5;">Private overwater villa, hydroplane transfers, butler service & sunset yacht cruise.</p>
+                        <div class="bs-price-row" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <div>
+                                <span style="font-size: 0.75rem; color: #94A3B8; display: block;">Per Traveler</span>
+                                <span class="bs-price" style="font-size: 1.4rem; font-weight: 700; color: #D4AF37;">$3,450</span>
+                            </div>
+                            <div class="bs-cta-btns">
+                                <button class="btn btn-candy add-to-cart" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 4px;"></i> Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 - Swiss Alps -->
+                <div class="bs-product-card" data-category="europe" data-aos="fade-up" data-aos-delay="200"
+                     data-name="Swiss Alpine VIP Chalet & Heli-Skiing" data-price="$4,800.00" data-rating="4.9" data-reviews="92"
+                     data-desc="6 Days / 5 Nights luxury alpine experience. Private mountain chalet, heated infinity thermal pool, heli-skiing guide, and private chef."
+                     data-img="images/dest_swiss.webp" style="background: #1E293B; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="bs-rank-badge bs-rank-silver" style="position: absolute; top: 15px; left: 15px; z-index: 2; background: #E2E8F0; color: #000; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;"><i class="fa-solid fa-medal"></i> #2 Choice</div>
+                    <div class="bs-img-zone" style="height: 220px; overflow: hidden; position: relative;">
+                        <img src="images/dest_swiss.webp" alt="Swiss Alpine VIP Chalet" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="bs-card-body" style="padding: 20px;">
+                        <div class="bs-card-top" style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="bs-category-tag" style="color: #00A896; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Europe &bull; 6 Days</span>
+                            <div class="bs-stars" style="color: #D4AF37; font-size: 0.85rem;">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span style="color: #94A3B8; margin-left: 4px;">(92)</span>
+                            </div>
+                        </div>
+                        <h3 class="bs-product-name" style="color: #fff; font-size: 1.3rem; margin: 10px 0 6px;">Swiss Alpine VIP Chalet</h3>
+                        <p class="bs-product-desc" style="color: #94A3B8; font-size: 0.9rem; line-height: 1.5;">Luxury ski chalet, thermal infinity pool, private ski instructor & helicopter tour.</p>
+                        <div class="bs-price-row" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <div>
+                                <span style="font-size: 0.75rem; color: #94A3B8; display: block;">Per Traveler</span>
+                                <span class="bs-price" style="font-size: 1.4rem; font-weight: 700; color: #D4AF37;">$4,800</span>
+                            </div>
+                            <div class="bs-cta-btns">
+                                <button class="btn btn-candy add-to-cart" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 4px;"></i> Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 - Santorini -->
+                <div class="bs-product-card" data-category="europe" data-aos="fade-up" data-aos-delay="300"
+                     data-name="Santorini Sunset Catamaran & Villa" data-price="$2,900.00" data-rating="4.8" data-reviews="115"
+                     data-desc="5 Days / 4 Nights cliffside infinity pool suite in Oia. Private catamaran voyage across the Aegean, wine estate tour, and luxury transfers."
+                     data-img="images/dest_santorini.webp" style="background: #1E293B; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="bs-rank-badge bs-rank-bronze" style="position: absolute; top: 15px; left: 15px; z-index: 2; background: #CD7F32; color: #fff; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;"><i class="fa-solid fa-award"></i> #3 Choice</div>
+                    <div class="bs-img-zone" style="height: 220px; overflow: hidden; position: relative;">
+                        <img src="images/dest_santorini.webp" alt="Santorini Sunset Catamaran" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="bs-card-body" style="padding: 20px;">
+                        <div class="bs-card-top" style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="bs-category-tag" style="color: #00A896; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Mediterranean &bull; 5 Days</span>
+                            <div class="bs-stars" style="color: #D4AF37; font-size: 0.85rem;">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span style="color: #94A3B8; margin-left: 4px;">(115)</span>
+                            </div>
+                        </div>
+                        <h3 class="bs-product-name" style="color: #fff; font-size: 1.3rem; margin: 10px 0 6px;">Santorini Sunset Villa</h3>
+                        <p class="bs-product-desc" style="color: #94A3B8; font-size: 0.9rem; line-height: 1.5;">Cliffside caldera suite, private catamaran sunset cruise, and volcanic island tour.</p>
+                        <div class="bs-price-row" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <div>
+                                <span style="font-size: 0.75rem; color: #94A3B8; display: block;">Per Traveler</span>
+                                <span class="bs-price" style="font-size: 1.4rem; font-weight: 700; color: #D4AF37;">$2,900</span>
+                            </div>
+                            <div class="bs-cta-btns">
+                                <button class="btn btn-candy add-to-cart" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 4px;"></i> Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;" data-aos="fade-up">
+                <a href="404.html" class="btn btn-candy" style="padding: 14px 36px; font-size: 1rem; background: linear-gradient(135deg, #D4AF37, #B38F24);">
+                    <span>Explore All 50+ Destination Packages</span>
+                    <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our DMC -->
+    <section class="section-padding why-choose-us" style="background-color: var(--color-beige); padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Destination Management Excellence</span>
+                <h2 style="font-size: 2.4rem; color: #0B192C; margin-top: 5px;">Why Leading Brands & Travelers Choose Aura DMC</h2>
+                <p style="color: #64748B;">Unrivaled local expertise, seamless ground operations, and round-the-clock VIP support</p>
+            </div>
+            
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 1px solid #E2E8F0;">
+                        <i class="fa-solid fa-map-location-dot" style="font-size: 2.5rem; color: #00A896; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0B192C; font-size: 1.2rem; margin-bottom: 10px;">50+ Local Destination Hubs</h3>
+                        <p style="color: #64748B; font-size: 0.95rem;">Dedicated local coordinators on the ground in every major destination region worldwide.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 1px solid #E2E8F0;">
+                        <i class="fa-solid fa-building-user" style="font-size: 2.5rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0B192C; font-size: 1.2rem; margin-bottom: 10px;">Turnkey Corporate MICE</h3>
+                        <p style="color: #64748B; font-size: 0.95rem;">Flawless management of corporate conferences, incentive trips, galas, and executive retreats.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 1px solid #E2E8F0;">
+                        <i class="fa-solid fa-headset" style="font-size: 2.5rem; color: #00A896; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0B192C; font-size: 1.2rem; margin-bottom: 10px;">24/7 Dedicated Concierge</h3>
+                        <p style="color: #64748B; font-size: 0.95rem;">Direct access to your dedicated personal travel manager from arrival through departure.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 1px solid #E2E8F0;">
+                        <i class="fa-solid fa-helicopter" style="font-size: 2.5rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                        <h3 style="color: #0B192C; font-size: 1.2rem; margin-bottom: 10px;">Private Jet & Yacht Charters</h3>
+                        <p style="color: #64748B; font-size: 0.95rem;">Seamless coordination of VIP air transfers, luxury yachts, and private limousine fleets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section-padding testimonials" style="background-color: #fff; padding: 80px 0; text-align:center;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="margin-bottom: 40px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Client Feedback</span>
+                <h2 style="font-size: 2.2rem; color: #0B192C;">What Event Directors & Travelers Say</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                <div style="background: #FAF8F5; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; text-align: left;" data-aos="fade-up">
+                    <div style="color: #D4AF37; font-size: 1.2rem; margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p style="color: #334155; font-style: italic; font-size: 0.95rem; line-height: 1.6;">"Aura DMC orchestrated our 250-person corporate leadership summit in Amalfi flawlessly. From helicopter transfers to the gala dinner, everything ran with military precision."</p>
+                    <div style="margin-top: 15px; font-weight: 700; color: #0B192C;">- Marcus Vance, VP Global Events</div>
+                </div>
+
+                <div style="background: #FAF8F5; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; text-align: left;" data-aos="fade-up" data-aos-delay="100">
+                    <div style="color: #D4AF37; font-size: 1.2rem; margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p style="color: #334155; font-style: italic; font-size: 0.95rem; line-height: 1.6;">"Our Maldives overwater retreat was absolute perfection. Aura's ground concierge took care of every single detail, including a private sandbank dinner at sunset."</p>
+                    <div style="margin-top: 15px; font-weight: 700; color: #0B192C;">- Elena Rostova, Luxury Traveler</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- NEW SECTION H1: Global DMC Operations Map & Fleet Network -->
+    <section class="section-padding" id="fleet-network" style="background: #0B192C; color: #fff; padding: 80px 0; border-top: 3px solid #00A896; border-bottom: 3px solid #D4AF37;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-plane-departure"></i> Operations Network</span>
+                <h2 style="font-size: 2.5rem; color: #fff; margin-top: 8px; font-family: 'Playfair Display', serif;">Global DMC Ground & Fleet Capabilities</h2>
+                <p style="color: #94A3B8; max-width: 650px; margin: 10px auto 0;">Coordinated from our Salem, Tamil Nadu Primary Command Center with dedicated ground teams worldwide.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-bottom: 50px;">
+                <div data-aos="fade-up" data-aos-delay="100" style="background: rgba(255,255,255,0.05); padding: 30px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <i class="fa-solid fa-earth-americas" style="font-size: 2.5rem; color: #00A896; margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 2.2rem; color: #fff; margin: 0; font-family: 'Playfair Display', serif;">50+</h3>
+                    <p style="color: #CBD5E1; font-size: 0.9rem; margin-top: 5px;">Managed Global Destinations</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" style="background: rgba(255,255,255,0.05); padding: 30px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <i class="fa-solid fa-briefcase" style="font-size: 2.5rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 2.2rem; color: #fff; margin: 0; font-family: 'Playfair Display', serif;">1,200+</h3>
+                    <p style="color: #CBD5E1; font-size: 0.9rem; margin-top: 5px;">Corporate MICE Galas Executed</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" style="background: rgba(255,255,255,0.05); padding: 30px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <i class="fa-solid fa-helicopter" style="font-size: 2.5rem; color: #00A896; margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 2.2rem; color: #fff; margin: 0; font-family: 'Playfair Display', serif;">150+</h3>
+                    <p style="color: #CBD5E1; font-size: 0.9rem; margin-top: 5px;">Jets, Yachts & Maybach Fleets</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400" style="background: rgba(255,255,255,0.05); padding: 30px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <i class="fa-solid fa-award" style="font-size: 2.5rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 2.2rem; color: #fff; margin: 0; font-family: 'Playfair Display', serif;">99.8%</h3>
+                    <p style="color: #CBD5E1; font-size: 0.9rem; margin-top: 5px;">VIP Client Satisfaction Score</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION H2: Corporate MICE & Executive Incentives Showcase -->
+    <section class="section-padding" id="mice-showcase" style="background: #FAF8F5; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-user-gear"></i> Corporate Solutions</span>
+                <h2 style="font-size: 2.4rem; color: #0B192C; margin-top: 5px; font-family: 'Playfair Display', serif;">Corporate MICE & Luxury Retreat Logistics</h2>
+                <p style="color: #64748B; max-width: 600px; margin: 0 auto;">Full end-to-end management for international conferences, executive summits, and luxury reward trips.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div data-aos="fade-up" data-aos-delay="100" style="background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <img src="images/dest_corporate.webp" alt="Corporate Gala" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #0B192C; margin-bottom: 10px;">Global Summit & Gala Dinners</h3>
+                        <p style="color: #64748B; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Complete venue buyouts, red carpet arrivals, staging, audio-visual, and multi-cuisine catering for 500+ delegates.</p>
+                        <a href="404.html" style="color: #00A896; font-weight: 700; font-size: 0.9rem; text-decoration: none;">Request MICE Plan <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" style="background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <img src="images/dest_swiss.webp" alt="Alpine Board Retreat" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #0B192C; margin-bottom: 10px;">Executive Board Retreats</h3>
+                        <p style="color: #64748B; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">High-security private chalet bookings in the Swiss Alps or private island sanctuaries with dedicated security and private chefs.</p>
+                        <a href="404.html" style="color: #00A896; font-weight: 700; font-size: 0.9rem; text-decoration: none;">Reserve Chalet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" style="background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+                    <img src="images/dest_dubai.webp" alt="Incentive Trips" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #0B192C; margin-bottom: 10px;">Incentive Travel Expeditions</h3>
+                        <p style="color: #64748B; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Curated reward itineraries featuring dune buggies in Dubai, private yacht galas, and tea ceremonies in Kyoto.</p>
+                        <a href="404.html" style="color: #00A896; font-weight: 700; font-size: 0.9rem; text-decoration: none;">Explore Expeditions <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION H3: Real-Time Traveler Testimonials & Executive Reviews -->
+    <section class="section-padding" id="testimonials" style="background: #ffffff; padding: 80px 0; border-top: 1px solid #E2E8F0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-quote-left"></i> Client Words</span>
+                <h2 style="font-size: 2.4rem; color: #0B192C; margin-top: 5px; font-family: 'Playfair Display', serif;">Endorsed by Global Corporate Leaders</h2>
+                <p style="color: #64748B; max-width: 600px; margin: 0 auto;">Read feedback from executives and luxury travelers who rely on Aura DMC.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                <div data-aos="fade-up" data-aos-delay="100" style="background: #FAF8F5; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0;">
+                    <div style="color: #D4AF37; margin-bottom: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p style="color: #475569; font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">"Aura DMC organized our 120-person annual tech conference in Dubai. From airport Maybach transfers to the desert gala, execution was 100% flawless."</p>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <img src="images/user_emily.webp" alt="Client Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem; color: #0B192C;">Marcus Vance</h4>
+                            <span style="font-size: 0.8rem; color: #00A896;">VP Operations, Apex Global</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" style="background: #FAF8F5; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0;">
+                    <div style="color: #D4AF37; margin-bottom: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p style="color: #475569; font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">"Our private villa retreat in Maldives was coordinated effortlessly by the Salem India Command Desk. The helicopter transfer and private chef exceeded expectations."</p>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <img src="images/user_sarah.webp" alt="Client Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem; color: #0B192C;">Sarah Jenkins</h4>
+                            <span style="font-size: 0.8rem; color: #00A896;">Managing Director, Horizon Media</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" style="background: #FAF8F5; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0;">
+                    <div style="color: #D4AF37; margin-bottom: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p style="color: #475569; font-style: italic; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">"The 24/7 concierge response speed is outstanding. When weather shifted our Alpine flights, Aura DMC had private road transports waiting within 15 minutes."</p>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <img src="images/about_img_4.webp" alt="Client Avatar" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem; color: #0B192C;">David K. Harrison</h4>
+                            <span style="font-size: 0.8rem; color: #00A896;">Chief Executive, Lumina Bio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION H4: Bespoke Itinerary Calculator & Cost Estimator -->
+    <section class="section-padding" id="itinerary-calculator" style="background: linear-gradient(135deg, #0B192C 0%, #1E293B 100%); color: #fff; padding: 80px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+                <div data-aos="fade-right">
+                    <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;"><i class="fa-solid fa-calculator"></i> Interactive Blueprint</span>
+                    <h2 style="font-size: 2.5rem; color: #fff; margin: 10px 0; font-family: 'Playfair Display', serif;">Instant Trip & MICE Cost Estimator</h2>
+                    <p style="color: #CBD5E1; line-height: 1.6; margin-bottom: 25px;">Select your travel parameters to calculate a real-time estimate for your custom itinerary or corporate MICE event.</p>
+                    
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div style="background: rgba(255,255,255,0.06); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                            <i class="fa-solid fa-shield-halved" style="color: #D4AF37;"></i> <span style="font-size: 0.85rem; color: #fff;">100% Refundable Deposit</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.06); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                            <i class="fa-solid fa-headset" style="color: #00A896;"></i> <span style="font-size: 0.85rem; color: #fff;">Dedicated DMC Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" style="background: #fff; color: #0B192C; padding: 35px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 20px; color: #0B192C;">Customize Your Estimate</h3>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #0B192C;">Destination Region</label>
+                        <select id="calc-region" onchange="updateTripEstimate()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #CBD5E1; margin-top: 5px; font-family: 'Inter', sans-serif;">
+                            <option value="2800">Maldives Luxury Retreat ($2,800/guest)</option>
+                            <option value="3500">Swiss Alps Alpine Chalet ($3,500/guest)</option>
+                            <option value="2200">Dubai MICE & Desert Gala ($2,200/guest)</option>
+                            <option value="3100">Kyoto Zen Culture Journey ($3,100/guest)</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #0B192C;">Number of Travelers: <span id="calc-guests-val" style="color: #00A896;">4</span></label>
+                        <input type="range" id="calc-guests" min="1" max="50" value="4" oninput="updateTripEstimate()" style="width: 100%; margin-top: 8px; accent-color: #00A896;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #0B192C;">Duration: <span id="calc-days-val" style="color: #00A896;">5 Days</span></label>
+                        <input type="range" id="calc-days" min="3" max="14" value="5" oninput="updateTripEstimate()" style="width: 100%; margin-top: 8px; accent-color: #00A896;">
+                    </div>
+
+                    <div style="background: #FAF8F5; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: center; margin-bottom: 20px;">
+                        <span style="font-size: 0.85rem; color: #64748B;">Estimated Total Cost</span>
+                        <div id="calc-total-display" style="font-size: 2.2rem; font-weight: 700; color: #00A896; font-family: 'Playfair Display', serif;">$11,200.00</div>
+                    </div>
+
+                    <a href="404.html" class="btn-candy" style="width: 100%; justify-content: center; padding: 12px; background: linear-gradient(135deg, #0B192C, #00A896); border-color: #00A896;">
+                        <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Lock In Official Proposal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function updateTripEstimate() {
+            var regionRate = parseFloat(document.getElementById('calc-region').value) || 2800;
+            var guests = parseInt(document.getElementById('calc-guests').value) || 4;
+            var days = parseInt(document.getElementById('calc-days').value) || 5;
+
+            document.getElementById('calc-guests-val').innerText = guests + (guests > 1 ? ' Guests' : ' Guest');
+            document.getElementById('calc-days-val').innerText = days + ' Days';
+
+            var total = regionRate * guests * (1 + (days - 3) * 0.15);
+            document.getElementById('calc-total-display').innerText = '$' + Math.round(total).toLocaleString('en-US') + '.00';
+        }
+    </script>
+
+
+    <footer style="background: #0B192C; color: #94A3B8; padding: 60px 0 30px; border-top: 3px solid #00A896;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #94A3B8;">Premier Destination Management Company specializing in corporate MICE travel, luxury bespoke itineraries, and VIP ground logistics.</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="404.html" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Twitter / X" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="404.html" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+                        <li><a href="shop.html" style="color: #94A3B8; text-decoration: none;">Destinations & Packages</a></li>
+                        <li><a href="about.html" style="color: #94A3B8; text-decoration: none;">DMC Services & Corporate MICE</a></li>
+                        <li><a href="blog.html" style="color: #94A3B8; text-decoration: none;">Travel Journal & Insights</a></li>
+                        <li><a href="contact.html" style="color: #94A3B8; text-decoration: none;">Request Proposal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #D4AF37; display: inline-block; padding-bottom: 5px;">Primary Headquarters</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color: #00A896; margin-right: 6px;"></i> Salem, Tamil Nadu, India</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #00A896; margin-right: 6px;"></i> concierge@auradmc.com</p>
+                    <p style="font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: #00A896; margin-right: 6px;"></i> +91 98765 43210</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Client Portals</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-user-gear" style="color: #D4AF37;"></i> Traveler & Client Portal</a></li>
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-chart-line" style="color: #00A896;"></i> DMC Operations Dashboard</a></li>
+                        <li><a href="404.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-handshake" style="color: #D4AF37;"></i> Agent & Partner Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748B;">
+                <p>&copy; 2026 Aura Destination Management Company. All Rights Reserved. Salem, Tamil Nadu, India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/global-features.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

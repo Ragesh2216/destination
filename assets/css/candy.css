@@ -1,0 +1,51 @@
+.btn-candy {
+    background: linear-gradient(135deg, #0B192C 0%, #00A896 100%);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 30px;
+    color: #ffffff !important;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 15px rgba(11, 25, 44, 0.3), inset 0 1px 1px rgba(255,255,255,0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-candy:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 22px rgba(0, 168, 150, 0.4);
+    background: linear-gradient(135deg, #00A896 0%, #0B192C 100%);
+    border-color: #D4AF37;
+}
+
+.btn-candy:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 5px 10px rgba(11, 25, 44, 0.4);
+}
+
+.nav-links li:has(.btn-candy) {
+    display: flex;
+    align-items: center;
+}
+
+/* Ripple Effect Styles */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-anim 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+}
+
+@keyframes ripple-anim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+

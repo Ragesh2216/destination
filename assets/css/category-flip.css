@@ -1,0 +1,209 @@
+/* =============================================
+   SHOP BY CATEGORY — FLIP CARD SECTION
+   ============================================= */
+
+.shop-categories {
+    padding: 80px 0;
+    background-color: var(--color-bg, #fdf8f4);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+    .category-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+    .category-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+@media (max-width: 480px) {
+    .category-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Flip Card Container --- */
+.category-card {
+    height: 300px;
+    cursor: pointer;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    position: relative;
+}
+
+/* --- Inner wrapper that flips --- */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 16px;
+}
+
+/* Flip state — triggered by JS class toggle AND hover */
+.category-card.flipped .card-inner,
+.category-card:hover .card-inner {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* --- Front & Back shared rules --- */
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* --- FRONT FACE --- */
+.card-front {
+    background: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(200,155,123,0.15);
+}
+
+.cat-img {
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 60px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cat-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.category-card:hover .cat-img img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.cat-name {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 16px 20px 14px;
+    background: linear-gradient(to top, #fff 70%, rgba(255,255,255,0));
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.cat-name h3 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.1rem;
+    color: var(--color-black, #1a1a1a);
+    margin: 0 0 3px;
+    font-weight: 600;
+}
+
+.cat-hint {
+    font-size: 0.75rem;
+    color: var(--color-rose-gold, #c8977b);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* --- BACK FACE --- */
+.card-back {
+    background: linear-gradient(135deg, #2e2e2e 0%, #1a1a1a 100%);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 24px 22px;
+    color: #fff;
+}
+
+.card-back h4 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.15rem;
+    color: var(--color-rose-gold, #c8977b);
+    margin: 0 0 6px;
+    font-weight: 600;
+}
+
+.cat-back-desc {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.cat-back-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.cat-back-list li {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.85);
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    line-height: 1.4;
+}
+
+.cat-back-list li:last-child {
+    border-bottom: none;
+}
+
+.btn-flip-explore {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 8px 18px;
+    background: var(--color-rose-gold, #c8977b);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-align: center;
+    -webkit-transition: background 0.3s ease, -webkit-transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-flip-explore:hover {
+    background: #b07a5e;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    color: #fff;
+    text-decoration: none;
+}

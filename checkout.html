@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Destination Management - Secure trip booking deposit and reservation checkout.">
+    <title>Secure Booking Deposit | Aura Destination Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/candy.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <script src="assets/js/header.js"></script>
+
+    <style>
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 35px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .checkout-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+            margin-bottom: 25px;
+        }
+
+        .card-box h3 {
+            font-family: 'Playfair Display', serif;
+            color: #0B192C;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #F1F5F9;
+            padding-bottom: 10px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0B192C;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #CBD5E1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <stackly-header></stackly-header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 80px; background: #FAF8F5; min-height: 85vh;">
+        
+        <!-- Banner -->
+        <section style="background: linear-gradient(rgba(11,25,44,0.88), rgba(11,25,44,0.88)), url('images/dest_swiss.webp') center/cover; padding: 60px 0; color: #fff; text-align: center;">
+            <div class="container">
+                <span style="color: #00A896; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;"><i class="fa-solid fa-shield-halved"></i> 256-Bit Encrypted Portal</span>
+                <h1 style="font-size: 2.6rem; font-family: 'Playfair Display', serif; margin: 8px 0;">Secure Booking Deposit & Confirmation</h1>
+                <p style="color: #CBD5E1;">Lock in your itinerary dates with an initial 20% refundable deposit</p>
+            </div>
+        </section>
+
+        <div class="container" style="padding: 40px 0 80px;">
+            <div class="checkout-layout">
+                
+                <!-- Left Forms -->
+                <div>
+                    
+                    <!-- Lead Passenger / Client Information -->
+                    <div class="card-box">
+                        <h3><i class="fa-solid fa-user-check" style="color: #00A896; margin-right: 8px;"></i> Lead Traveler Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" value="Alexander" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" value="Vance" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="alexander.vance@apex.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" value="+1 (555) 234-5678" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Passport Country</label>
+                                <select>
+                                    <option>United States</option>
+                                    <option>United Kingdom</option>
+                                    <option>Switzerland</option>
+                                    <option>Germany</option>
+                                    <option>United Arab Emirates</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Emergency Contact</label>
+                                <input type="text" value="Sarah Vance (+1 555 987-6543)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flight & Ground Arrival Details -->
+                    <div class="card-box">
+                        <h3><i class="fa-solid fa-plane-arrival" style="color: #D4AF37; margin-right: 8px;"></i> Flight & Arrival Logistics</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Arrival Flight Number</label>
+                                <input type="text" placeholder="e.g. LX 18 / EK 201">
+                            </div>
+                            <div class="form-group">
+                                <label>Arrival Date & Time</label>
+                                <input type="text" placeholder="Oct 15, 2026 at 14:30">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Airport VIP Meet & Greet Preference</label>
+                            <select>
+                                <option>Private Tarmac Escort & Limousine Fleet</option>
+                                <option>Helicopter Airport Transfer (if available)</option>
+                                <option>Standard Executive Driver Escort</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="card-box">
+                        <h3><i class="fa-solid fa-credit-card" style="color: #00A896; margin-right: 8px;"></i> Deposit Payment Method</h3>
+                        
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <label style="flex: 1; border: 2px solid #00A896; padding: 12px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; gap: 10px; background: rgba(0,168,150,0.05);">
+                                <input type="radio" name="pay" checked accent-color="#00A896">
+                                <div>
+                                    <strong style="display: block; font-size: 0.9rem; color: #0B192C;">Credit Card / Amex Centurion</strong>
+                                    <span style="font-size: 0.75rem; color: #64748B;">Instant Confirmation</span>
+                                </div>
+                            </label>
+
+                            <label style="flex: 1; border: 1px solid #CBD5E1; padding: 12px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                                <input type="radio" name="pay" accent-color="#00A896">
+                                <div>
+                                    <strong style="display: block; font-size: 0.9rem; color: #0B192C;">Corporate Wire Transfer</strong>
+                                    <span style="font-size: 0.75rem; color: #64748B;">Invoice Issued to Billing</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cardholder Name</label>
+                            <input type="text" value="Alexander Vance">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group" style="grid-column: span 2;">
+                                <label>Card Number</label>
+                                <input type="text" value="•••• •••• •••• 9842">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Expiration Date</label>
+                                <input type="text" value="11 / 28">
+                            </div>
+                            <div class="form-group">
+                                <label>CVC / CWW</label>
+                                <input type="text" value="•••">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Trip Summary -->
+                <div>
+                    <div class="card-box" style="position: sticky; top: 100px;">
+                        <h3>Booking Summary</h3>
+                        
+                        <div style="font-size: 0.9rem; color: #475569; line-height: 2;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Maldives Sanctuary</span>
+                                <strong>$3,450.00</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Swiss Alpine VIP Chalet</span>
+                                <strong>$4,800.00</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Ground Logistics & Escort</span>
+                                <strong>$350.00</strong>
+                            </div>
+                            <div style="border-top: 2px solid #F1F5F9; margin-top: 10px; padding-top: 10px; font-weight: 700; color: #0B192C; display: flex; justify-content: space-between; font-size: 1.1rem;">
+                                <span>Total Trip Investment</span>
+                                <span>$8,600.00</span>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(212,175,55,0.12); padding: 15px; border-radius: 10px; border: 1px solid rgba(212,175,55,0.4); margin: 20px 0;">
+                            <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: #B38F24; display: block;">Deposit Due Today (20%)</span>
+                            <span style="font-size: 1.6rem; font-weight: 700; color: #0B192C; font-family: 'Playfair Display', serif;">$1,720.00</span>
+                            <p style="font-size: 0.75rem; color: #64748B; margin-top: 4px;">Remaining balance of $6,880.00 due 30 days prior to departure.</p>
+                        </div>
+
+                        <button onclick="window.location.href='dashboard.html';" class="btn-candy" style="width: 100%; justify-content: center; padding: 14px; font-size: 1rem; background: linear-gradient(135deg, #D4AF37, #B38F24);">
+                            <i class="fa-solid fa-lock" style="margin-right: 8px;"></i> Confirm Booking & Deposit
+                        </button>
+
+                        <div style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #94A3B8;">
+                            <i class="fa-solid fa-circle-check" style="color: #00A896;"></i> Instant Voucher & Ground Itinerary Generation.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+        <!-- Footer -->
+    <footer style="background: #0B192C; color: #94A3B8; padding: 60px 0 30px; border-top: 3px solid #00A896;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #94A3B8;">Premier Destination Management Company specializing in corporate MICE travel, luxury bespoke itineraries, and VIP ground logistics.</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social-icons" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="404.html" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" aria-label="Twitter / X" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" aria-label="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="404.html" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+                        <li><a href="shop.html" style="color: #94A3B8; text-decoration: none;">Destinations & Packages</a></li>
+                        <li><a href="about.html" style="color: #94A3B8; text-decoration: none;">DMC Services & Corporate MICE</a></li>
+                        <li><a href="blog.html" style="color: #94A3B8; text-decoration: none;">Travel Journal & Insights</a></li>
+                        <li><a href="contact.html" style="color: #94A3B8; text-decoration: none;">Request Proposal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #D4AF37; display: inline-block; padding-bottom: 5px;">Primary Headquarters</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color: #00A896; margin-right: 6px;"></i> Salem, Tamil Nadu, India</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #00A896; margin-right: 6px;"></i> concierge@auradmc.com</p>
+                    <p style="font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: #00A896; margin-right: 6px;"></i> +91 98765 43210</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 1rem; margin-bottom: 15px; border-bottom: 2px solid #00A896; display: inline-block; padding-bottom: 5px;">Client Portals</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
+                        <li><a href="dashboard.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-user-gear" style="color: #D4AF37;"></i> Traveler & Client Portal</a></li>
+                        <li><a href="admin-dashboard.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-chart-line" style="color: #00A896;"></i> DMC Operations Dashboard</a></li>
+                        <li><a href="influencer-dashboard.html" style="color: #94A3B8; text-decoration: none;"><i class="fa-solid fa-handshake" style="color: #D4AF37;"></i> Agent & Partner Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.85rem; color: #64748B;">
+                <p>&copy; 2026 Aura Destination Management Company. All Rights Reserved. Salem, Tamil Nadu, India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/global-features.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

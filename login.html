@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Destination Management - Portal Sign In">
+    <title>Sign In | Aura Destination Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/candy.css">
+    <link rel="stylesheet" href="assets/css/responsive-fixes.css">
+    <script src="assets/js/header.js"></script>
+    <link rel="stylesheet" href="assets/css/header.css">
+
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(11,25,44,0.9), rgba(11,25,44,0.9)), url('images/dest_swiss.webp') center/cover no-repeat;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: #fff;
+            width: 100%;
+            max-width: 440px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .auth-input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid #CBD5E1;
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div style="margin-bottom: 25px;">
+                <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 50px; width: auto; object-fit: contain; margin-bottom: 10px;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #0B192C; margin-top: 15px;">Sign In to Your Portal</h2>
+                <p style="color: #64748B; font-size: 0.85rem;">Access your itineraries, vouchers & ground logistics</p>
+            </div>
+
+            <form onsubmit="event.preventDefault(); var p=document.getElementById('portalType').value; if(p==='admin') window.location.href='admin-dashboard.html'; else window.location.href='dashboard.html';">
+                <div style="text-align: left; margin-bottom: 15px;">
+                    <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Portal Account Type</label>
+                    <select class="auth-input" style="margin-top: 5px;" id="portalType">
+                        <option value="client">Client Portal</option>
+                        <option value="admin">Admin Operations Command</option>
+                    </select>
+                </div>
+
+                <div style="text-align: left; margin-bottom: 15px;">
+                    <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Email Address</label>
+                    <input type="email" id="loginEmail" class="auth-input" value="alexander.vance@apex.com" required>
+                </div>
+
+                <div style="text-align: left; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                        <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Password</label>
+                        <a href="javascript:void(0)" onclick="handleForgotPassword()" style="font-size: 0.8rem; color: #00A896; text-decoration: none; font-weight: 600;">Forgot Password?</a>
+                    </div>
+                    <input type="password" class="auth-input" value="••••••••••••" required>
+                </div>
+
+                <button type="submit" onclick="var p=document.getElementById('portalType').value; if(p==='admin') window.location.href='admin-dashboard.html'; else window.location.href='dashboard.html';" class="btn-candy" style="width: 100%; justify-content: center; padding: 12px; font-size: 1rem; background: linear-gradient(135deg, #0B192C, #00A896); border-color: #D4AF37;">
+                    Sign In &rarr;
+                </button>
+            </form>
+
+            <script>
+                function handleForgotPassword() {
+                    var email = document.getElementById('loginEmail') ? document.getElementById('loginEmail').value : 'alexander.vance@apex.com';
+                    var userEmail = prompt('Enter your registered email address to reset password:', email);
+                    if (userEmail) {
+                        alert('Password reset instructions have been sent to ' + userEmail);
+                    }
+                }
+            </script>
+
+            <div style="margin-top: 25px; border-top: 1px solid #F1F5F9; padding-top: 15px; font-size: 0.85rem; color: #64748B;">
+                Don't have a portal account? <a href="signup.html" style="color: #00A896; font-weight: 700; text-decoration: none;">Register Here</a>
+            </div>
+            <div style="margin-top: 10px; font-size: 0.8rem;">
+                <a href="index.html" style="color: #64748B; text-decoration: none;"><i class="fa-solid fa-house"></i> Return to Main Home Page</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
