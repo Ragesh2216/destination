@@ -143,60 +143,73 @@
             <div class="shop-container">
                 <!-- Sidebar Filters -->
                 <aside class="sidebar">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #0B192C; margin: 0;">Filters</h3>
+                        <button type="button" id="resetFiltersBtn" style="font-size: 0.78rem; background: transparent; border: 1px solid #00A896; color: #00A896; padding: 4px 10px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                    </div>
+
                     <div class="filter-group">
                         <h4><i class="fa-solid fa-earth-americas" style="color: #00A896; margin-right: 6px;"></i> Region</h4>
-                        <label class="filter-item"><input type="checkbox" checked> All Regions</label>
-                        <label class="filter-item"><input type="checkbox"> Europe & Mediterranean</label>
-                        <label class="filter-item"><input type="checkbox"> Asia-Pacific & Islands</label>
-                        <label class="filter-item"><input type="checkbox"> Middle East & Africa</label>
-                        <label class="filter-item"><input type="checkbox"> Americas & Caribbean</label>
+                        <label class="filter-item"><input type="checkbox" class="region-filter" value="all" checked> All Regions</label>
+                        <label class="filter-item"><input type="checkbox" class="region-filter" value="europe"> Europe & Mediterranean</label>
+                        <label class="filter-item"><input type="checkbox" class="region-filter" value="asia"> Asia-Pacific & Islands</label>
+                        <label class="filter-item"><input type="checkbox" class="region-filter" value="middle-east"> Middle East & Africa</label>
+                        <label class="filter-item"><input type="checkbox" class="region-filter" value="americas"> Americas & Caribbean</label>
                     </div>
 
                     <div class="filter-group">
                         <h4><i class="fa-solid fa-compass" style="color: #D4AF37; margin-right: 6px;"></i> Experience Style</h4>
-                        <label class="filter-item"><input type="checkbox"> Corporate MICE & Retreat</label>
-                        <label class="filter-item"><input type="checkbox"> Luxury Resort & Island</label>
-                        <label class="filter-item"><input type="checkbox"> Alpine & Ski Expedition</label>
-                        <label class="filter-item"><input type="checkbox"> Private Yacht & Coastal</label>
-                        <label class="filter-item"><input type="checkbox"> Cultural & Heritage</label>
+                        <label class="filter-item"><input type="checkbox" class="style-filter" value="corporate"> Corporate MICE & Retreat</label>
+                        <label class="filter-item"><input type="checkbox" class="style-filter" value="resort"> Luxury Resort & Island</label>
+                        <label class="filter-item"><input type="checkbox" class="style-filter" value="alpine"> Alpine & Ski Expedition</label>
+                        <label class="filter-item"><input type="checkbox" class="style-filter" value="yacht"> Private Yacht & Coastal</label>
+                        <label class="filter-item"><input type="checkbox" class="style-filter" value="cultural"> Cultural & Heritage</label>
                     </div>
 
                     <div class="filter-group">
                         <h4><i class="fa-solid fa-clock" style="color: #00A896; margin-right: 6px;"></i> Trip Duration</h4>
-                        <label class="filter-item"><input type="radio" name="dur" checked> Any Duration</label>
-                        <label class="filter-item"><input type="radio" name="dur"> 3 - 5 Days Executive</label>
-                        <label class="filter-item"><input type="radio" name="dur"> 6 - 9 Days Vacation</label>
-                        <label class="filter-item"><input type="radio" name="dur"> 10+ Days Grand Tour</label>
+                        <label class="filter-item"><input type="radio" name="dur" class="dur-filter" value="all" checked> Any Duration</label>
+                        <label class="filter-item"><input type="radio" name="dur" class="dur-filter" value="3-5"> 3 - 5 Days Executive</label>
+                        <label class="filter-item"><input type="radio" name="dur" class="dur-filter" value="6-9"> 6 - 9 Days Vacation</label>
+                        <label class="filter-item"><input type="radio" name="dur" class="dur-filter" value="10+"> 10+ Days Grand Tour</label>
                     </div>
 
                     <div class="filter-group">
                         <h4><i class="fa-solid fa-dollar-sign" style="color: #D4AF37; margin-right: 6px;"></i> Budget Per Person</h4>
-                        <label class="filter-item"><input type="checkbox"> Under $3,000</label>
-                        <label class="filter-item"><input type="checkbox"> $3,000 - $5,000</label>
-                        <label class="filter-item"><input type="checkbox"> $5,000 - $10,000</label>
-                        <label class="filter-item"><input type="checkbox"> $10,000+ VIP Ultra</label>
+                        <label class="filter-item"><input type="checkbox" class="budget-filter" value="under-3000"> Under $3,000</label>
+                        <label class="filter-item"><input type="checkbox" class="budget-filter" value="3000-5000"> $3,000 - $5,000</label>
+                        <label class="filter-item"><input type="checkbox" class="budget-filter" value="5000-10000"> $5,000 - $10,000</label>
+                        <label class="filter-item"><input type="checkbox" class="budget-filter" value="10000+"> $10,000+ VIP Ultra</label>
                     </div>
                 </aside>
 
                 <!-- Packages Grid -->
                 <main>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; background: #fff; padding: 15px 25px; border-radius: 12px; border: 1px solid #E2E8F0;">
-                        <span style="color: #64748B; font-size: 0.95rem;">Showing <strong>6 Featured Destination Packages</strong></span>
+                        <span id="pkgCountText" style="color: #64748B; font-size: 0.95rem;">Showing <strong>6 Featured Destination Packages</strong></span>
                         <div>
                             <label style="font-size: 0.9rem; color: #64748B; margin-right: 8px;">Sort by:</label>
-                            <select style="padding: 8px 12px; border-radius: 8px; border: 1px solid #CBD5E1; color: #0B192C;">
-                                <option>Popularity & Rating</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
-                                <option>Duration</option>
+                            <select id="sortSelect" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #CBD5E1; color: #0B192C;">
+                                <option value="popular">Popularity & Rating</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="duration">Duration</option>
                             </select>
                         </div>
                     </div>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
                         
+                        <!-- Empty State message -->
+                        <div id="noResultsMsg" style="display: none; text-align: center; padding: 50px 20px; background: #fff; border-radius: 12px; border: 1px solid #E2E8F0; grid-column: 1 / -1;">
+                            <i class="fa-solid fa-compass" style="font-size: 2.5rem; color: #CBD5E1; margin-bottom: 15px;"></i>
+                            <h3 style="color: #0B192C; font-family: 'Playfair Display', serif; margin-bottom: 10px;">No Destinations Match Selected Filters</h3>
+                            <p style="color: #64748B; font-size: 0.9rem; margin-bottom: 20px;">Try adjusting your Region, Experience Style, or Budget criteria.</p>
+                            <button type="button" class="btn-candy" id="resetFilterBtn2" style="padding: 8px 20px;"><i class="fa-solid fa-rotate-right"></i> Reset All Filters</button>
+                        </div>
+
                         <!-- Card 1 -->
-                        <div class="dest-card product-card" data-name="Maldives Overwater Sanctuary" data-price="$3,450.00" data-rating="5" data-reviews="148" data-img="images/dest_maldives.webp" data-desc="7 Days overwater bungalow package with hydroplane transfer and butler service.">
+                        <div class="dest-card product-card" data-name="Maldives Overwater Sanctuary" data-price="$3,450.00" data-rating="5" data-reviews="148" data-img="images/dest_maldives.webp" data-desc="7 Days overwater bungalow package with hydroplane transfer and butler service." data-region="asia" data-style="resort" data-duration="7" data-price-val="3450" data-rating-val="5.0">
                             <div class="dest-img-container">
                                 <span style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #00A896; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">TROPICAL ISLAND</span>
                                 <img src="images/dest_maldives.webp" alt="Maldives Sanctuary">
@@ -219,7 +232,7 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="dest-card product-card" data-name="Swiss Alpine VIP Chalet" data-price="$4,800.00" data-rating="4.9" data-reviews="92" data-img="images/dest_swiss.webp" data-desc="6 Days luxury alpine chalet package with thermal spa and heli-skiing guide.">
+                        <div class="dest-card product-card" data-name="Swiss Alpine VIP Chalet" data-price="$4,800.00" data-rating="4.9" data-reviews="92" data-img="images/dest_swiss.webp" data-desc="6 Days luxury alpine chalet package with thermal spa and heli-skiing guide." data-region="europe" data-style="alpine" data-duration="6" data-price-val="4800" data-rating-val="4.9">
                             <div class="dest-img-container">
                                 <span style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #D4AF37; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">ALPINE CHALET</span>
                                 <img src="images/dest_swiss.webp" alt="Swiss Alps Chalet">
@@ -242,7 +255,7 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="dest-card product-card" data-name="Santorini Sunset Catamaran" data-price="$2,900.00" data-rating="4.8" data-reviews="115" data-img="images/dest_santorini.webp" data-desc="5 Days cliffside infinity suite in Oia with private catamaran sunset cruise.">
+                        <div class="dest-card product-card" data-name="Santorini Sunset Catamaran" data-price="$2,900.00" data-rating="4.8" data-reviews="115" data-img="images/dest_santorini.webp" data-desc="5 Days cliffside infinity suite in Oia with private catamaran sunset cruise." data-region="europe" data-style="resort yacht" data-duration="5" data-price-val="2900" data-rating-val="4.8">
                             <div class="dest-img-container">
                                 <span style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #00A896; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">MEDITERRANEAN</span>
                                 <img src="images/dest_santorini.webp" alt="Santorini Catamaran">
@@ -265,7 +278,7 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="dest-card product-card" data-name="Kyoto Zen Cultural Retreat" data-price="$3,100.00" data-rating="4.9" data-reviews="84" data-img="images/dest_kyoto.webp" data-desc="7 Days luxury Ryokan package with private Onsen and tea master sessions.">
+                        <div class="dest-card product-card" data-name="Kyoto Zen Cultural Retreat" data-price="$3,100.00" data-rating="4.9" data-reviews="84" data-img="images/dest_kyoto.webp" data-desc="7 Days luxury Ryokan package with private Onsen and tea master sessions." data-region="asia" data-style="cultural" data-duration="7" data-price-val="3100" data-rating-val="4.9">
                             <div class="dest-img-container">
                                 <span style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #00A896; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">CULTURAL</span>
                                 <img src="images/dest_kyoto.webp" alt="Kyoto Zen">
@@ -288,7 +301,7 @@
                         </div>
 
                         <!-- Card 5 -->
-                        <div class="dest-card product-card" data-name="Dubai Executive Desert Gala" data-price="$4,200.00" data-rating="4.8" data-reviews="102" data-img="images/dest_dubai.webp" data-desc="5 Days Dubai desert retreat and corporate executive gala dinner package.">
+                        <div class="dest-card product-card" data-name="Dubai Executive Desert Gala" data-price="$4,200.00" data-rating="4.8" data-reviews="102" data-img="images/dest_dubai.webp" data-desc="5 Days Dubai desert retreat and corporate executive gala dinner package." data-region="middle-east" data-style="corporate" data-duration="5" data-price-val="4200" data-rating-val="4.8">
                             <div class="dest-img-container">
                                 <span style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #D4AF37; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">CORPORATE MICE</span>
                                 <img src="images/dest_dubai.webp" alt="Dubai Desert Gala">
@@ -311,7 +324,7 @@
                         </div>
 
                         <!-- Card 6 -->
-                        <div class="dest-card product-card" data-name="Amalfi Coast Private Yacht Expedition" data-price="$5,500.00" data-rating="5" data-reviews="76" data-img="images/dest_corporate.webp" data-desc="6 Days Amalfi coast luxury yacht charter and cliffside villa package.">
+                        <div class="dest-card product-card" data-name="Amalfi Coast Private Yacht Expedition" data-price="$5,500.00" data-rating="5" data-reviews="76" data-img="images/dest_corporate.webp" data-desc="6 Days Amalfi coast luxury yacht charter and cliffside villa package." data-region="europe" data-style="yacht" data-duration="6" data-price-val="5500" data-rating-val="5.0">
                             <div class="dest-img-container">
                                 <span style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #00A896; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">PRIVATE YACHT</span>
                                 <img src="images/dest_corporate.webp" alt="Amalfi Yacht">
@@ -461,7 +474,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 <div>
                     <div style="margin-bottom: 15px;">
-                        <a href="404.html" style="display: inline-block;">
+                        <a href="index.html" style="display: inline-block;">
                             <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1);">
                         </a>
                     </div>
@@ -472,7 +485,6 @@
                         <a href="404.html" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-instagram"></i></a>
                         <a href="404.html" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="404.html" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="404.html" aria-label="Twitter / X" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="404.html" aria-label="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-whatsapp"></i></a>
                         <a href="404.html" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: #fff; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.12);"><i class="fa-brands fa-youtube"></i></a>
                     </div>
@@ -513,6 +525,145 @@
     <script src="assets/js/global-features.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const regionCBs = document.querySelectorAll('.region-filter');
+            const styleCBs = document.querySelectorAll('.style-filter');
+            const durRadios = document.querySelectorAll('.dur-filter');
+            const budgetCBs = document.querySelectorAll('.budget-filter');
+            const sortSelect = document.getElementById('sortSelect');
+            const pkgCards = Array.from(document.querySelectorAll('.dest-card.product-card'));
+            const pkgGrid = document.querySelector('.shop-container main div[style*="grid-template-columns"]');
+            const pkgCountText = document.getElementById('pkgCountText');
+            const noResultsMsg = document.getElementById('noResultsMsg');
+            const resetBtn = document.getElementById('resetFiltersBtn');
+            const resetBtn2 = document.getElementById('resetFilterBtn2');
+
+            // Region "All Regions" checkbox exclusivity
+            regionCBs.forEach(cb => {
+                cb.addEventListener('change', function() {
+                    if (this.value === 'all' && this.checked) {
+                        regionCBs.forEach(other => { if (other !== cb) other.checked = false; });
+                    } else if (this.checked) {
+                        const allCB = document.querySelector('.region-filter[value="all"]');
+                        if (allCB) allCB.checked = false;
+                    }
+                    applyFilters();
+                });
+            });
+
+            [...styleCBs, ...durRadios, ...budgetCBs].forEach(input => {
+                input.addEventListener('change', applyFilters);
+            });
+
+            if (sortSelect) sortSelect.addEventListener('change', applyFilters);
+
+            function resetAll() {
+                regionCBs.forEach(cb => cb.checked = (cb.value === 'all'));
+                styleCBs.forEach(cb => cb.checked = false);
+                durRadios.forEach(r => r.checked = (r.value === 'all'));
+                budgetCBs.forEach(cb => cb.checked = false);
+                if (sortSelect) sortSelect.value = 'popular';
+                applyFilters();
+            }
+
+            if (resetBtn) resetBtn.addEventListener('click', resetAll);
+            if (resetBtn2) resetBtn2.addEventListener('click', resetAll);
+
+            function applyFilters() {
+                const selectedRegions = Array.from(regionCBs).filter(cb => cb.checked).map(cb => cb.value);
+                const selectedStyles = Array.from(styleCBs).filter(cb => cb.checked).map(cb => cb.value);
+                const selectedDur = Array.from(durRadios).find(r => r.checked)?.value || 'all';
+                const selectedBudgets = Array.from(budgetCBs).filter(cb => cb.checked).map(cb => cb.value);
+
+                let visibleCount = 0;
+
+                pkgCards.forEach(card => {
+                    const cardRegion = card.getAttribute('data-region') || '';
+                    const cardStyles = (card.getAttribute('data-style') || '').split(' ');
+                    const cardDur = parseInt(card.getAttribute('data-duration') || '0', 10);
+                    const cardPrice = parseFloat(card.getAttribute('data-price-val') || '0');
+
+                    // 1. Region match
+                    let regionMatch = false;
+                    if (selectedRegions.length === 0 || selectedRegions.includes('all')) {
+                        regionMatch = true;
+                    } else {
+                        regionMatch = selectedRegions.includes(cardRegion);
+                    }
+
+                    // 2. Style match
+                    let styleMatch = false;
+                    if (selectedStyles.length === 0) {
+                        styleMatch = true;
+                    } else {
+                        styleMatch = selectedStyles.some(s => cardStyles.includes(s));
+                    }
+
+                    // 3. Duration match
+                    let durMatch = false;
+                    if (selectedDur === 'all') {
+                        durMatch = true;
+                    } else if (selectedDur === '3-5') {
+                        durMatch = (cardDur >= 3 && cardDur <= 5);
+                    } else if (selectedDur === '6-9') {
+                        durMatch = (cardDur >= 6 && cardDur <= 9);
+                    } else if (selectedDur === '10+') {
+                        durMatch = (cardDur >= 10);
+                    }
+
+                    // 4. Budget match
+                    let budgetMatch = false;
+                    if (selectedBudgets.length === 0) {
+                        budgetMatch = true;
+                    } else {
+                        budgetMatch = selectedBudgets.some(b => {
+                            if (b === 'under-3000') return cardPrice < 3000;
+                            if (b === '3000-5000') return cardPrice >= 3000 && cardPrice <= 5000;
+                            if (b === '5000-10000') return cardPrice >= 5000 && cardPrice <= 10000;
+                            if (b === '10000+') return cardPrice > 10000;
+                            return false;
+                        });
+                    }
+
+                    if (regionMatch && styleMatch && durMatch && budgetMatch) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Sorting
+                const sortVal = sortSelect ? sortSelect.value : 'popular';
+                const sortedCards = pkgCards.slice().sort((a, b) => {
+                    const priceA = parseFloat(a.getAttribute('data-price-val') || '0');
+                    const priceB = parseFloat(b.getAttribute('data-price-val') || '0');
+                    const durA = parseInt(a.getAttribute('data-duration') || '0', 10);
+                    const durB = parseInt(b.getAttribute('data-duration') || '0', 10);
+                    const ratingA = parseFloat(a.getAttribute('data-rating-val') || '0');
+                    const ratingB = parseFloat(b.getAttribute('data-rating-val') || '0');
+
+                    if (sortVal === 'price-asc') return priceA - priceB;
+                    if (sortVal === 'price-desc') return priceB - priceA;
+                    if (sortVal === 'duration') return durB - durA;
+                    return ratingB - ratingA;
+                });
+
+                if (pkgGrid) {
+                    sortedCards.forEach(card => pkgGrid.appendChild(card));
+                }
+
+                // Update count and empty state UI
+                if (pkgCountText) {
+                    pkgCountText.innerHTML = `Showing <strong>${visibleCount} Featured Destination ${visibleCount === 1 ? 'Package' : 'Packages'}</strong>`;
+                }
+
+                if (noResultsMsg) {
+                    noResultsMsg.style.display = (visibleCount === 0) ? 'block' : 'none';
+                }
+            }
+        });
     </script>
 </body>
 </html>

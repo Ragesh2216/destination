@@ -4,19 +4,76 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Sidebar Toggle
+    // 1. Sidebar Toggle & Mobile Overlay
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebarToggle');
     
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
-            if (window.innerWidth <= 992) {
-                sidebar.classList.toggle('mobile-open');
+    let overlay = document.querySelector('.sidebar-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'sidebar-overlay';
+        document.body.appendChild(overlay);
+    }
+    
+    function openSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.add('mobile-open', 'active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+        if (!sidebar) return;
+        sidebar.classList.remove('mobile-open', 'active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function toggleSidebar() {
+        if (!sidebar) return;
+        if (window.innerWidth <= 992) {
+            if (sidebar.classList.contains('mobile-open') || sidebar.classList.contains('active')) {
+                closeSidebar();
             } else {
-                sidebar.classList.toggle('collapsed');
+                openSidebar();
             }
+        } else {
+            sidebar.classList.toggle('collapsed');
+        }
+    }
+
+    if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleSidebar();
         });
     }
+
+    if (overlay) {
+        overlay.addEventListener('click', closeSidebar);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSidebar();
+    });
+
+    // Close top-to-bottom menu when any sidebar link is clicked on mobile
+    if (sidebar) {
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    closeSidebar();
+                }
+            });
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 992) {
+            closeSidebar();
+        }
+    });
 
     // 2. Dark/Light Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
