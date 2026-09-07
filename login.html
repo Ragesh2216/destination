@@ -57,12 +57,14 @@
     <div class="auth-container">
         <div class="auth-card">
             <div style="margin-bottom: 25px;">
-                <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 50px; width: auto; object-fit: contain; margin-bottom: 10px;">
+                <a href="index.html" style="display: inline-block;">
+                    <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 50px; width: auto; object-fit: contain; margin-bottom: 10px;">
+                </a>
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #0B192C; margin-top: 15px;">Sign In to Your Portal</h2>
                 <p style="color: #64748B; font-size: 0.85rem;">Access your itineraries, vouchers & ground logistics</p>
             </div>
 
-            <form onsubmit="event.preventDefault(); var p=document.getElementById('portalType').value; if(p==='admin') window.location.href='admin-dashboard.html'; else window.location.href='dashboard.html';">
+            <form onsubmit="handleLogin(event)">
                 <div style="text-align: left; margin-bottom: 15px;">
                     <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Portal Account Type</label>
                     <select class="auth-input" style="margin-top: 5px;" id="portalType">
@@ -73,28 +75,36 @@
 
                 <div style="text-align: left; margin-bottom: 15px;">
                     <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Email Address</label>
-                    <input type="email" id="loginEmail" class="auth-input" value="alexander.vance@apex.com" required>
+                    <input type="email" id="loginEmail" class="auth-input" placeholder="e.g. alexander.vance@apex.com" required>
                 </div>
 
                 <div style="text-align: left; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                         <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Password</label>
-                        <a href="javascript:void(0)" onclick="handleForgotPassword()" style="font-size: 0.8rem; color: #00A896; text-decoration: none; font-weight: 600;">Forgot Password?</a>
                     </div>
-                    <input type="password" class="auth-input" value="••••••••••••" required>
+                    <input type="password" id="loginPassword" class="auth-input" placeholder="Enter your password" required>
+                        <a href="404.html" style="font-size: 0.8rem; color: #00A896; text-decoration: none; font-weight: 600;">Forgot Password?</a>
+                
                 </div>
 
-                <button type="submit" onclick="var p=document.getElementById('portalType').value; if(p==='admin') window.location.href='admin-dashboard.html'; else window.location.href='dashboard.html';" class="btn-candy" style="width: 100%; justify-content: center; padding: 12px; font-size: 1rem; background: linear-gradient(135deg, #0B192C, #00A896); border-color: #D4AF37;">
+                <button type="submit" class="btn-candy" style="width: 100%; justify-content: center; padding: 12px; font-size: 1rem; background: linear-gradient(135deg, #0B192C, #00A896); border-color: #D4AF37;">
                     Sign In &rarr;
                 </button>
             </form>
 
             <script>
-                function handleForgotPassword() {
-                    var email = document.getElementById('loginEmail') ? document.getElementById('loginEmail').value : 'alexander.vance@apex.com';
-                    var userEmail = prompt('Enter your registered email address to reset password:', email);
-                    if (userEmail) {
-                        alert('Password reset instructions have been sent to ' + userEmail);
+                function handleLogin(e) {
+                    e.preventDefault();
+                    var emailInput = document.getElementById('loginEmail');
+                    var email = emailInput ? emailInput.value.trim() : '';
+                    if (email) {
+                        localStorage.setItem('aura_user_email', email);
+                    }
+                    var p = document.getElementById('portalType').value;
+                    if (p === 'admin') {
+                        window.location.href = 'admin-dashboard.html';
+                    } else {
+                        window.location.href = 'dashboard.html';
                     }
                 }
             </script>

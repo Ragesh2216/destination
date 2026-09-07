@@ -52,7 +52,7 @@
             </nav>
             
             <div style="margin-top: auto; padding-top: 40px;">
-                <a href="login.html" style="color: #EF4444; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 15px; font-weight: 600;"><i class="fa-solid fa-right-from-bracket"></i> <span>Admin Logout</span></a>
+                <a href="login.html" style="color: #EF4444; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 15px; font-weight: 600;"><i class="fa-solid fa-right-from-bracket"></i> <span> Logout</span></a>
             </div>
         </aside>
 
@@ -78,7 +78,7 @@
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
                 <div>
                     <h1 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #0B192C; margin: 0 0 5px 0;">DMC Operations Control Center</h1>
-                    <p style="color: #64748B; margin: 0;">Live tracking across 50+ global destination hubs</p>
+                    <p style="color: #64748B; margin: 0;" id="adminSubHeading">Live tracking across 50+ global destination hubs</p>
                 </div>
                 <a href="404.html" class="btn-candy" style="padding: 10px 20px; font-size: 0.85rem;"><i class="fa-solid fa-plus" style="margin-right: 6px;"></i> Create New Proposal</a>
             </div>
@@ -170,6 +170,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+        
+        (function() {
+            var givenEmail = localStorage.getItem('aura_user_email');
+            if (givenEmail) {
+                var subEl = document.getElementById('adminSubHeading');
+                if (subEl) subEl.textContent = 'Signed in as: ' + givenEmail + ' • Live tracking across 50+ global hubs';
+            }
+        })();
     </script>
 </body>
 </html>

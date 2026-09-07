@@ -94,33 +94,44 @@ class StacklyHeader extends HTMLElement {
 
         btn._menuWired = true;
 
-        var overlay = document.querySelector('.menu-overlay');
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.className = 'menu-overlay';
-            if (document.body) {
-                document.body.appendChild(overlay);
-            } else {
-                document.addEventListener('DOMContentLoaded', function() {
-                    if (!document.querySelector('.menu-overlay')) {
-                        document.body.appendChild(overlay);
-                    }
-                });
+        function getOrCreateOverlay() {
+            var overlay = document.querySelector('.menu-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'menu-overlay';
+                if (document.body) {
+                    document.body.appendChild(overlay);
+                } else {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        if (!document.querySelector('.menu-overlay') && document.body) {
+                            document.body.appendChild(overlay);
+                        }
+                    });
+                }
             }
+            return overlay;
         }
 
+        var overlay = getOrCreateOverlay();
+
         function openMenu() {
+            var ol = getOrCreateOverlay();
             menu.classList.add('active');
-            if (overlay) overlay.classList.add('active');
+            btn.classList.add('active');
+            if (ol) ol.classList.add('active');
             if (headerEl) headerEl.classList.add('menu-open');
+            document.body.classList.add('menu-open');
             btn.setAttribute('aria-expanded', 'true');
             document.body.style.overflow = 'hidden';
         }
 
         function closeMenu() {
+            var ol = document.querySelector('.menu-overlay');
             menu.classList.remove('active');
-            if (overlay) overlay.classList.remove('active');
+            btn.classList.remove('active');
+            if (ol) ol.classList.remove('active');
             if (headerEl) headerEl.classList.remove('menu-open');
+            document.body.classList.remove('menu-open');
             btn.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
         }
@@ -138,7 +149,10 @@ class StacklyHeader extends HTMLElement {
         }
 
         btn.addEventListener('click', toggleMenu);
-        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        if (overlay) {
+            overlay.addEventListener('click', closeMenu);
+        }
 
         var links = menu.querySelectorAll('a');
         links.forEach(function(link) {
@@ -165,6 +179,14 @@ class StacklyHeader extends HTMLElement {
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && menu.classList.contains('active')) closeMenu();
+        });
+
+        // Global click handler as a absolute safety net
+        document.addEventListener('click', function(e) {
+            var targetOverlay = e.target;
+            if (targetOverlay && targetOverlay.classList && targetOverlay.classList.contains('menu-overlay')) {
+                closeMenu();
+            }
         });
     }
 }

@@ -58,12 +58,14 @@
     <div class="auth-container">
         <div class="auth-card">
             <div style="margin-bottom: 25px;">
-                <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 50px; width: auto; object-fit: contain; margin-bottom: 10px;">
+                <a href="index.html" style="display: inline-block;">
+                    <img src="images/stackly_logo.webp" alt="Aura DMC Logo" style="height: 50px; width: auto; object-fit: contain; margin-bottom: 10px;">
+                </a>
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #0B192C; margin-top: 15px;">Create Portal Account</h2>
                 <p style="color: #64748B; font-size: 0.85rem;">Register for seamless itinerary tracking & VIP concierge access</p>
             </div>
 
-            <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+            <form onsubmit="handleSignup(event)">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <div style="text-align: left;">
                         <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">First Name</label>
@@ -77,7 +79,7 @@
 
                 <div style="text-align: left; margin-bottom: 15px;">
                     <label style="font-size: 0.8rem; font-weight: 700; color: #0B192C; text-transform: uppercase;">Business Email</label>
-                    <input type="email" class="auth-input" placeholder="alexander@company.com" required>
+                    <input type="email" id="signupEmail" class="auth-input" placeholder="alexander@company.com" required>
                 </div>
 
                 <div style="text-align: left; margin-bottom: 15px;">
@@ -94,6 +96,18 @@
                     Register Account &rarr;
                 </button>
             </form>
+
+            <script>
+                function handleSignup(e) {
+                    e.preventDefault();
+                    var emailInput = document.getElementById('signupEmail');
+                    if (emailInput && emailInput.value.trim()) {
+                        localStorage.setItem('aura_user_email', emailInput.value.trim());
+                    }
+                    alert('Account registered successfully! Redirecting to sign in page.');
+                    window.location.href = 'login.html';
+                }
+            </script>
 
             <div style="margin-top: 25px; border-top: 1px solid #F1F5F9; padding-top: 15px; font-size: 0.85rem; color: #64748B;">
                 Already have an account? <a href="login.html" style="color: #00A896; font-weight: 700; text-decoration: none;">Sign In</a>

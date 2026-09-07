@@ -47,8 +47,9 @@
         <aside class="sidebar" id="sidebar">
             <div style="padding-bottom: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1);">
                 <img src="images/dest_maldives.webp" alt="Profile" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid #00A896; margin-bottom: 10px;">
-                <h3 style="margin: 0; font-size: 1.1rem; color: #fff;">Alexander Vance</h3>
-                <span style="font-size: 0.8rem; color: #D4AF37; font-weight: 600;"><i class="fa-solid fa-crown"></i> VIP Member &bull; Apex Corp</span>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #fff;" id="userProfileName">Alexander Vance</h3>
+                <span style="font-size: 0.8rem; color: #CBD5E1; display: block; margin-top: 4px;" id="userProfileEmail">alexander.vance@apex.com</span>
+                <span style="font-size: 0.8rem; color: #D4AF37; font-weight: 600; margin-top: 5px; display: inline-block;"><i class="fa-solid fa-crown"></i> VIP Member &bull; Apex Corp</span>
             </div>
 
             <nav class="sidebar-nav" style="margin-top: 25px; display: flex; flex-direction: column; gap: 10px;">
@@ -84,8 +85,8 @@
 
             <div class="welcome-banner" data-aos="fade-up">
                 <div>
-                    <h1 style="margin: 0 0 8px 0; font-family: 'Playfair Display', serif; font-size: 2.2rem;">Welcome Back, Alexander!</h1>
-                    <p style="margin: 0; opacity: 0.9;">Your 7-Day Maldives Overwater Retreat is fully confirmed for October 15, 2026.</p>
+                    <h1 style="margin: 0 0 8px 0; font-family: 'Playfair Display', serif; font-size: 2.2rem;" id="userWelcomeTitle">Welcome Back, Alexander!</h1>
+                    <p style="margin: 0; opacity: 0.9;" id="userWelcomeDesc">Logged in as <strong id="userDisplayEmail">alexander.vance@apex.com</strong> &bull; 7-Day Maldives Overwater Retreat is confirmed.</p>
                 </div>
                 <div style="text-align: right;">
                     <a href="404.html" class="btn-candy" style="background: linear-gradient(135deg, #D4AF37, #B38F24); font-size: 0.85rem;"><i class="fa-solid fa-comment-dots" style="margin-right: 6px;"></i> Live Concierge Chat</a>
@@ -180,6 +181,25 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+
+        // Dynamic rendering of given email from login/signup
+        (function() {
+            var givenEmail = localStorage.getItem('aura_user_email');
+            if (givenEmail) {
+                var emailEl = document.getElementById('userProfileEmail');
+                var displayEmailEl = document.getElementById('userDisplayEmail');
+                var nameEl = document.getElementById('userProfileName');
+                var welcomeEl = document.getElementById('userWelcomeTitle');
+                
+                var namePart = givenEmail.split('@')[0];
+                var formattedName = namePart.replace(/[._-]/g, ' ').replace(/\b\w/g, function(l){ return l.toUpperCase(); });
+                
+                if (emailEl) emailEl.textContent = givenEmail;
+                if (displayEmailEl) displayEmailEl.textContent = givenEmail;
+                if (nameEl) nameEl.textContent = formattedName;
+                if (welcomeEl) welcomeEl.textContent = 'Welcome Back, ' + formattedName + '!';
+            }
+        })();
     </script>
 </body>
 </html>
